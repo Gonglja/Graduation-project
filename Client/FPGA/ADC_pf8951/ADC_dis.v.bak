@@ -1,0 +1,12 @@
+module ADC_dis(clk,ren,scl,sda,dig_sel,dig_num,en)
+	input clk,ren;
+	output scl;
+	inout sda;
+	output [1:0]dig_sel;
+	output [7:0]dig_num;
+	reg [7:0]temp;
+
+adc u1(.clk(clk),.en(ren), .scl(scl),.sda(sda),.data_out(temp));
+display u2(.clk(clk), .num(temp), .dig_sel(dig_sel), .en_o(en), .dig_num(dig_num));
+
+endmodule

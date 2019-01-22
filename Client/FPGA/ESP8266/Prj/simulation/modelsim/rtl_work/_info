@@ -1,0 +1,246 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\wslibeia\Desktop\fenglibai(UART)(E)\Code\V1.0\simulation\modelsim
+vangle_dale
+I3TbZD`5IPPSIh[OZZBAPA3
+V8zhM`h1X@=a`akQcjfU>42
+Z1 dC:\Users\wslibeia\Desktop\fenglibai(UART)(E)\Code\V1.0\simulation\modelsim
+w1535593560
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/angle_dale.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/angle_dale.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source -O0
+!i10b 1
+!s100 VBTk]LH7JCdDQ3@3Az=j92
+!s85 0
+!s108 1536243155.957000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/angle_dale.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/angle_dale.v|
+!s101 -O0
+vclk_set
+Iz7JM075l9mFn21KDm9Q^K0
+VY_@j_UF<i1HCzS3di^0Q>1
+R1
+w1527646571
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/clk_set.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/clk_set.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 _3VCQ0@IRQ`l1_@E=b^BL1
+!s85 0
+!s108 1536243155.475000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/clk_set.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/clk_set.v|
+!s101 -O0
+vesp8266_decode
+IfNdi;cjVkY_74mTkh0_UL0
+VO^FJoEcL`8[mPjz4]3Dnl2
+R1
+w1535866315
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_decode.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_decode.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 XNXbD8T>7Q[T808YNfd1?0
+!s85 0
+!s108 1536243155.410000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_decode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_decode.v|
+!s101 -O0
+vesp8266_encode
+IjR0]MkHZOjHATS33ham_]1
+VPIc4C>EfeVnFIJFL45HYk0
+R1
+w1535533222
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_encode.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_encode.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 zQ4^inZZbBI`@_9hIfa?_0
+!s85 0
+!s108 1536243155.321000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_encode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_encode.v|
+!s101 -O0
+vlcd1602
+IQYic<e8P^TAg0IL1obnJK1
+V>KakGA0YA03<`9Rk3VnSn0
+R1
+w1529660471
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/lcd1602.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/lcd1602.v
+L0 9
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 TGaI@S]L4oa5@6;>8Z5n12
+!s85 0
+!s108 1536243155.651000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/lcd1602.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/lcd1602.v|
+!s101 -O0
+vpid_control
+I2=gD>N`k<OGoSYl8A;zAF3
+V38J>m`;Jld^:7hVV9LJzh0
+R1
+w1536112742
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pid_control.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pid_control.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 gYD6lKi]PD=J>_;6K8]BZ1
+!s85 0
+!s108 1536243155.591000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pid_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pid_control.v|
+!s101 -O0
+vpwm
+Ica@;R_YY?dI8aYnd2o^6f1
+V[M;=OKJY6ICand7BW5Tff3
+R1
+w1529656394
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pwm.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pwm.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 GP:0]U^h:Az4JJBNC4f;f1
+!s85 0
+!s108 1536243155.532000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pwm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pwm.v|
+!s101 -O0
+vReceiveMessage_control
+!i10b 1
+!s100 R[fd>7m2Ke?SR`m7z>1=]2
+I;X2]ahda>CD1c6K7dz]gz1
+VjDG;@n1=;=P7d[@@bk4l;3
+R1
+w1535868069
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/ReceiveMessage_control.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/ReceiveMessage_control.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1536243156.019000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/ReceiveMessage_control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/ReceiveMessage_control.v|
+!s101 -O0
+R3
+R4
+n@receive@message_control
+vtop
+IYDU`d6GXe<cEgob7V5`Wg0
+VDC^fbD:aiW<gKW@ncTW4_1
+R1
+w1536112445
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/top.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/top.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 6eIE2beM1l2aJ6@c<4QdD3
+!s85 0
+!s108 1536243155.894000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/top.v|
+!s101 -O0
+vuart_rx
+IG]bXAK]3FUJ1cG7A22G9>2
+VYW>0T77B0aARQA68><kB63
+R1
+w1527682197
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_rx.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_rx.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 gRK?FMUSX9lk?DD1Y;n>S0
+!s85 0
+!s108 1536243155.835000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_rx.v|
+!s101 -O0
+vuart_tx
+IYGJeZa;O6[8kIoEAI;zDc3
+V@kJB?NYM^cfcXT3V`^hR93
+R1
+w1527658063
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_tx.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_tx.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 BA5Q2UijVeUhMQfGkIbc;0
+!s85 0
+!s108 1536243155.776000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_tx.v|
+!s101 -O0
+vw_dale
+IHQUoJ?e_n1;;Z;lB`GWI32
+V6]]FNAH0V9EAlkScXkAIS2
+R1
+w1535879887
+8C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/w_dale.v
+FC:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/w_dale.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 RZ?WGJ1`idiBKjQCJPR_g3
+!s85 0
+!s108 1536243155.716000
+!s107 C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/w_dale.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source|C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/w_dale.v|
+!s101 -O0

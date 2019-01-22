@@ -1,0 +1,248 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  d:/altera/12.0/quartus/bin/
+Quartus sim root      :  d:/altera/12.0/quartus/eda/sim_lib
+Simulation Tool       :  modelsim
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  adc.vo
+Sim SDF file          :  adc__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim software
+Sourced NativeLink script d:/altera/12.0/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File adc_run_msim_gate_verilog.do already exists - backing up current file as adc_run_msim_gate_verilog.do.bak2
+Probing transcript
+ModelSim Info: # Reading D:/modeltech_10.0c/tcl/vsim/pref.tcl 
+ModelSim Info: # //  ModelSim SE 10.0c Jul 21 2011 
+ModelSim Info: # //
+ModelSim Info: # //  Copyright 1991-2011 Mentor Graphics Corporation
+ModelSim Info: # //  All Rights Reserved.
+ModelSim Info: # //
+ModelSim Info: # //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+ModelSim Info: # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+ModelSim Info: # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+ModelSim Info: # //
+ModelSim Info: # do adc_run_msim_gate_verilog.do 
+ModelSim Info: # if ![file isdirectory verilog_libs] {
+ModelSim Info: # 	file mkdir verilog_libs
+ModelSim Info: # }
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/altera_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+ModelSim Info: # vmap altera_ver ./verilog_libs/altera_ver
+ModelSim Info: # Modifying D:\modeltech_10.0c\win32/../modelsim.ini
+ModelSim Info: # vlog -vlog01compat -work altera_ver {d:/altera/12.0/quartus/eda/sim_lib/altera_primitives.v}
+ModelSim Info: # Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+ModelSim Info: # -- Compiling module global
+ModelSim Info: # -- Compiling module carry
+ModelSim Info: # -- Compiling module cascade
+ModelSim Info: # -- Compiling module carry_sum
+ModelSim Info: # -- Compiling module exp
+ModelSim Info: # -- Compiling module soft
+ModelSim Info: # -- Compiling module opndrn
+ModelSim Info: # -- Compiling module row_global
+ModelSim Info: # -- Compiling module TRI
+ModelSim Info: # -- Compiling module lut_input
+ModelSim Info: # -- Compiling module lut_output
+ModelSim Info: # -- Compiling module latch
+ModelSim Info: # -- Compiling module dlatch
+ModelSim Info: # -- Compiling module prim_gdff
+ModelSim Info: # -- Compiling module dff
+ModelSim Info: # -- Compiling module dffe
+ModelSim Info: # -- Compiling module dffea
+ModelSim Info: # -- Compiling module dffeas
+ModelSim Info: # -- Compiling module prim_gtff
+ModelSim Info: # -- Compiling module tff
+ModelSim Info: # -- Compiling module tffe
+ModelSim Info: # -- Compiling module prim_gjkff
+ModelSim Info: # -- Compiling module jkff
+ModelSim Info: # -- Compiling module jkffe
+ModelSim Info: # -- Compiling module prim_gsrff
+ModelSim Info: # -- Compiling module srff
+ModelSim Info: # -- Compiling module srffe
+ModelSim Info: # -- Compiling module clklock
+ModelSim Info: # -- Compiling module alt_inbuf
+ModelSim Info: # -- Compiling module alt_outbuf
+ModelSim Info: # -- Compiling module alt_outbuf_tri
+ModelSim Info: # -- Compiling module alt_iobuf
+ModelSim Info: # -- Compiling module alt_inbuf_diff
+ModelSim Info: # -- Compiling module alt_outbuf_diff
+ModelSim Info: # -- Compiling module alt_outbuf_tri_diff
+ModelSim Info: # -- Compiling module alt_iobuf_diff
+ModelSim Info: # -- Compiling module alt_bidir_diff
+ModelSim Info: # -- Compiling module alt_bidir_buf
+ModelSim Info: # -- Compiling UDP PRIM_GDFF_LOW
+ModelSim Info: # -- Compiling UDP PRIM_GDFF_HIGH
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	global
+ModelSim Info: # 	carry
+ModelSim Info: # 	cascade
+ModelSim Info: # 	carry_sum
+ModelSim Info: # 	exp
+ModelSim Info: # 	soft
+ModelSim Info: # 	opndrn
+ModelSim Info: # 	row_global
+ModelSim Info: # 	TRI
+ModelSim Info: # 	lut_input
+ModelSim Info: # 	lut_output
+ModelSim Info: # 	latch
+ModelSim Info: # 	dlatch
+ModelSim Info: # 	dff
+ModelSim Info: # 	dffe
+ModelSim Info: # 	dffea
+ModelSim Info: # 	dffeas
+ModelSim Info: # 	tff
+ModelSim Info: # 	tffe
+ModelSim Info: # 	jkff
+ModelSim Info: # 	jkffe
+ModelSim Info: # 	srff
+ModelSim Info: # 	srffe
+ModelSim Info: # 	clklock
+ModelSim Info: # 	alt_inbuf
+ModelSim Info: # 	alt_outbuf
+ModelSim Info: # 	alt_outbuf_tri
+ModelSim Info: # 	alt_iobuf
+ModelSim Info: # 	alt_inbuf_diff
+ModelSim Info: # 	alt_outbuf_diff
+ModelSim Info: # 	alt_outbuf_tri_diff
+ModelSim Info: # 	alt_iobuf_diff
+ModelSim Info: # 	alt_bidir_diff
+ModelSim Info: # 	alt_bidir_buf
+ModelSim Info: # 
+ModelSim Info: # vlib verilog_libs/cycloneive_ver
+ModelSim Warning: # ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneive_ver".
+ModelSim Info: # vmap cycloneive_ver ./verilog_libs/cycloneive_ver
+ModelSim Info: # Modifying D:\modeltech_10.0c\win32/../modelsim.ini
+ModelSim Info: # vlog -vlog01compat -work cycloneive_ver {d:/altera/12.0/quartus/eda/sim_lib/cycloneive_atoms.v}
+ModelSim Info: # Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+ModelSim Info: # -- Compiling UDP CYCLONEIVE_PRIM_DFFE
+ModelSim Info: # -- Compiling UDP CYCLONEIVE_PRIM_DFFEAS
+ModelSim Info: # -- Compiling UDP CYCLONEIVE_PRIM_DFFEAS_HIGH
+ModelSim Info: # -- Compiling module cycloneive_dffe
+ModelSim Info: # -- Compiling module cycloneive_mux21
+ModelSim Info: # -- Compiling module cycloneive_mux41
+ModelSim Info: # -- Compiling module cycloneive_and1
+ModelSim Info: # -- Compiling module cycloneive_and16
+ModelSim Info: # -- Compiling module cycloneive_bmux21
+ModelSim Info: # -- Compiling module cycloneive_b17mux21
+ModelSim Info: # -- Compiling module cycloneive_nmux21
+ModelSim Info: # -- Compiling module cycloneive_b5mux21
+ModelSim Info: # -- Compiling module cycloneive_latch
+ModelSim Info: # -- Compiling module cycloneive_routing_wire
+ModelSim Info: # -- Compiling module cycloneive_m_cntr
+ModelSim Info: # -- Compiling module cycloneive_n_cntr
+ModelSim Info: # -- Compiling module cycloneive_scale_cntr
+ModelSim Info: # -- Compiling module cycloneive_pll_reg
+ModelSim Info: # -- Compiling module cycloneive_pll
+ModelSim Info: # -- Compiling module cycloneive_lcell_comb
+ModelSim Info: # -- Compiling module cycloneive_ff
+ModelSim Info: # -- Compiling module cycloneive_ram_pulse_generator
+ModelSim Info: # -- Compiling module cycloneive_ram_register
+ModelSim Info: # -- Compiling module cycloneive_ram_block
+ModelSim Info: # -- Compiling module cycloneive_mac_data_reg
+ModelSim Info: # -- Compiling module cycloneive_mac_sign_reg
+ModelSim Info: # -- Compiling module cycloneive_mac_mult_internal
+ModelSim Info: # -- Compiling module cycloneive_mac_mult
+ModelSim Info: # -- Compiling module cycloneive_mac_out
+ModelSim Info: # -- Compiling module cycloneive_io_ibuf
+ModelSim Info: # -- Compiling module cycloneive_io_obuf
+ModelSim Info: # -- Compiling module cycloneive_ddio_out
+ModelSim Info: # -- Compiling module cycloneive_ddio_oe
+ModelSim Info: # -- Compiling module cycloneive_pseudo_diff_out
+ModelSim Info: # -- Compiling module cycloneive_io_pad
+ModelSim Info: # -- Compiling module cycloneive_ena_reg
+ModelSim Info: # -- Compiling module cycloneive_clkctrl
+ModelSim Info: # -- Compiling module cycloneive_rublock
+ModelSim Info: # -- Compiling module cycloneive_apfcontroller
+ModelSim Info: # -- Compiling module cycloneive_termination_ctrl
+ModelSim Info: # -- Compiling module cycloneive_termination_rupdn
+ModelSim Info: # -- Compiling module cycloneive_termination
+ModelSim Info: # -- Compiling module cycloneive_jtag
+ModelSim Info: # -- Compiling module cycloneive_crcblock
+ModelSim Info: # -- Compiling module cycloneive_oscillator
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	cycloneive_dffe
+ModelSim Info: # 	cycloneive_and1
+ModelSim Info: # 	cycloneive_and16
+ModelSim Info: # 	cycloneive_bmux21
+ModelSim Info: # 	cycloneive_b17mux21
+ModelSim Info: # 	cycloneive_nmux21
+ModelSim Info: # 	cycloneive_b5mux21
+ModelSim Info: # 	cycloneive_pll_reg
+ModelSim Info: # 	cycloneive_pll
+ModelSim Info: # 	cycloneive_lcell_comb
+ModelSim Info: # 	cycloneive_ff
+ModelSim Info: # 	cycloneive_ram_block
+ModelSim Info: # 	cycloneive_mac_mult
+ModelSim Info: # 	cycloneive_mac_out
+ModelSim Info: # 	cycloneive_io_ibuf
+ModelSim Info: # 	cycloneive_io_obuf
+ModelSim Info: # 	cycloneive_ddio_out
+ModelSim Info: # 	cycloneive_ddio_oe
+ModelSim Info: # 	cycloneive_pseudo_diff_out
+ModelSim Info: # 	cycloneive_io_pad
+ModelSim Info: # 	cycloneive_clkctrl
+ModelSim Info: # 	cycloneive_rublock
+ModelSim Info: # 	cycloneive_apfcontroller
+ModelSim Info: # 	cycloneive_termination
+ModelSim Info: # 	cycloneive_jtag
+ModelSim Info: # 	cycloneive_crcblock
+ModelSim Info: # 	cycloneive_oscillator
+ModelSim Info: # 
+ModelSim Info: # if {[file exists gate_work]} {
+ModelSim Info: # 	vdel -lib gate_work -all
+ModelSim Info: # }
+ModelSim Info: # vlib gate_work
+ModelSim Info: # vmap work gate_work
+ModelSim Info: # Modifying D:\modeltech_10.0c\win32/../modelsim.ini
+ModelSim Info: # 
+ModelSim Info: # vlog -vlog01compat -work work +incdir+. {adc.vo}
+ModelSim Info: # Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+ModelSim Info: # -- Compiling module ADC_dis
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	ADC_dis
+ModelSim Info: # 
+ModelSim Info: # vlog -vlog01compat -work work +incdir+H:/FPGA_PROJ/ADC/simulation/modelsim {H:/FPGA_PROJ/ADC/simulation/modelsim/ADC_dis.vt}
+ModelSim Info: # Model Technology ModelSim SE vlog 10.0c Compiler 2011.07 Jul 21 2011
+ModelSim Info: # -- Compiling module ADC_dis_vlg_tst
+ModelSim Info: # 
+ModelSim Info: # Top level modules:
+ModelSim Info: # 	ADC_dis_vlg_tst
+ModelSim Info: # 
+ModelSim Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  ADC_dis_vlg_tst
+ModelSim Info: # vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps ADC_dis_vlg_tst 
+ModelSim Info: # ** Note: (vsim-3812) Design is being optimized...
+ModelSim Info: # Loading work.ADC_dis_vlg_tst(fast)
+ModelSim Info: # Loading work.ADC_dis(fast)
+ModelSim Info: # Loading altera_ver.dffeas(fast)
+ModelSim Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast)
+ModelSim Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__1)
+ModelSim Info: # Loading cycloneive_ver.cycloneive_io_obuf(fast)
+ModelSim Info: # Loading cycloneive_ver.cycloneive_io_ibuf(fast)
+ModelSim Info: # Loading cycloneive_ver.cycloneive_clkctrl(fast)
+ModelSim Info: # Loading cycloneive_ver.cycloneive_mux41(fast)
+ModelSim Info: # Loading cycloneive_ver.cycloneive_ena_reg(fast)
+ModelSim Info: # Loading instances from adc_v.sdo
+ModelSim Info: # Loading timing data from adc_v.sdo
+ModelSim Info: # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+ModelSim Info: #    Time: 0 ps  Iteration: 0  Instance: /ADC_dis_vlg_tst File: H:/FPGA_PROJ/ADC/simulation/modelsim/ADC_dis.vt
+ModelSim Info: # 
+ModelSim Info: # add wave *
+ModelSim Info: # 
+ModelSim Info: # view structure
+ModelSim Info: # .main_pane.structure.interior.cs.body.struct
+ModelSim Info: # view signals
+ModelSim Info: # .main_pane.objects.interior.cs.body.tree
+ModelSim Info: # run -all
+ModelSim Info: #  
+Info: NativeLink simulation flow was successful

@@ -1,0 +1,11 @@
+{application,emqx,
+             [{description,"EMQ X Broker"},
+              {vsn,"3.0.0"},
+              {modules, ['emqx','emqx_access_control','emqx_access_rule','emqx_acl_cache','emqx_acl_internal','emqx_acl_mod','emqx_alarm_mgr','emqx_app','emqx_auth_mod','emqx_banned','emqx_base62','emqx_batch','emqx_bridge','emqx_bridge_sup','emqx_broker','emqx_broker_helper','emqx_broker_sup','emqx_cli','emqx_client','emqx_client_sock','emqx_cm','emqx_cm_sup','emqx_config','emqx_connection','emqx_ctl','emqx_flapping','emqx_frame','emqx_gc','emqx_gen_mod','emqx_guid','emqx_hooks','emqx_inflight','emqx_json','emqx_keepalive','emqx_kernel_sup','emqx_listeners','emqx_local_bridge','emqx_local_bridge_sup','emqx_local_bridge_sup_sup','emqx_logger','emqx_logger_formatter','emqx_message','emqx_metrics','emqx_misc','emqx_mod_presence','emqx_mod_rewrite','emqx_mod_subscription','emqx_mod_sup','emqx_modules','emqx_mountpoint','emqx_mqtt_caps','emqx_mqtt_props','emqx_mqtt_types','emqx_mqueue','emqx_packet','emqx_pd','emqx_plugins','emqx_pmon','emqx_pool','emqx_pool_sup','emqx_pqueue','emqx_protocol','emqx_rate_limiter','emqx_reason_codes','emqx_router','emqx_router_helper','emqx_router_sup','emqx_rpc','emqx_sequence','emqx_session','emqx_session_sup','emqx_shared_sub','emqx_sm','emqx_sm_locker','emqx_sm_registry','emqx_sm_sup','emqx_stats','emqx_sup','emqx_sys','emqx_sys_mon','emqx_sys_sup','emqx_tables','emqx_time','emqx_topic','emqx_tracer','emqx_trie','emqx_types','emqx_vm','emqx_ws_connection','emqx_zone']},
+              {registered,[emqx_sup]},
+              {applications,[kernel,stdlib,jsx,gproc,gen_rpc,esockd,cowboy]},
+              {env,[]},
+              {mod,{emqx_app,[]}},
+              {maintainers,["Feng Lee <feng@emqx.io>"]},
+              {licenses,["Apache-2.0"]},
+              {links,[{"Github","https://github.com/emqx/emqx"}]}]}.

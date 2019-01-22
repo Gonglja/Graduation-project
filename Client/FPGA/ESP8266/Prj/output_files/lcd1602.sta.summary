@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_sys'
+Slack : -31.060
+TNS   : -365.245
+
+Type  : Slow 1200mV 85C Model Setup 'esp8266_encode:encode|sig'
+Slack : -8.758
+TNS   : -3452.792
+
+Type  : Slow 1200mV 85C Model Setup 'clk_set:CLK_UART|clk'
+Slack : -7.769
+TNS   : -225.394
+
+Type  : Slow 1200mV 85C Model Setup 'uart_rx:module_rx_esp8266|rx_int'
+Slack : -0.381
+TNS   : -1.041
+
+Type  : Slow 1200mV 85C Model Hold 'clk_set:CLK_UART|clk'
+Slack : -0.250
+TNS   : -0.627
+
+Type  : Slow 1200mV 85C Model Hold 'clk_sys'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'uart_rx:module_rx_esp8266|rx_int'
+Slack : 0.263
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'esp8266_encode:encode|sig'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_sys'
+Slack : -3.000
+TNS   : -139.804
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'esp8266_encode:encode|sig'
+Slack : -1.487
+TNS   : -623.053
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_set:CLK_UART|clk'
+Slack : -1.487
+TNS   : -120.447
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uart_rx:module_rx_esp8266|rx_int'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Setup 'clk_sys'
+Slack : -28.282
+TNS   : -324.477
+
+Type  : Slow 1200mV 0C Model Setup 'esp8266_encode:encode|sig'
+Slack : -8.085
+TNS   : -3184.738
+
+Type  : Slow 1200mV 0C Model Setup 'clk_set:CLK_UART|clk'
+Slack : -7.212
+TNS   : -203.192
+
+Type  : Slow 1200mV 0C Model Setup 'uart_rx:module_rx_esp8266|rx_int'
+Slack : -0.243
+TNS   : -0.630
+
+Type  : Slow 1200mV 0C Model Hold 'clk_set:CLK_UART|clk'
+Slack : -0.124
+TNS   : -0.259
+
+Type  : Slow 1200mV 0C Model Hold 'clk_sys'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'uart_rx:module_rx_esp8266|rx_int'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'esp8266_encode:encode|sig'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_sys'
+Slack : -3.000
+TNS   : -139.804
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'esp8266_encode:encode|sig'
+Slack : -1.487
+TNS   : -623.053
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_set:CLK_UART|clk'
+Slack : -1.487
+TNS   : -120.447
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uart_rx:module_rx_esp8266|rx_int'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Fast 1200mV 0C Model Setup 'clk_sys'
+Slack : -12.716
+TNS   : -100.905
+
+Type  : Fast 1200mV 0C Model Setup 'clk_set:CLK_UART|clk'
+Slack : -3.534
+TNS   : -65.509
+
+Type  : Fast 1200mV 0C Model Setup 'esp8266_encode:encode|sig'
+Slack : -3.168
+TNS   : -1230.215
+
+Type  : Fast 1200mV 0C Model Setup 'uart_rx:module_rx_esp8266|rx_int'
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_set:CLK_UART|clk'
+Slack : -0.280
+TNS   : -0.711
+
+Type  : Fast 1200mV 0C Model Hold 'clk_sys'
+Slack : -0.162
+TNS   : -0.162
+
+Type  : Fast 1200mV 0C Model Hold 'esp8266_encode:encode|sig'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'uart_rx:module_rx_esp8266|rx_int'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_sys'
+Slack : -3.000
+TNS   : -102.279
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'esp8266_encode:encode|sig'
+Slack : -1.000
+TNS   : -419.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_set:CLK_UART|clk'
+Slack : -1.000
+TNS   : -81.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uart_rx:module_rx_esp8266|rx_int'
+Slack : -1.000
+TNS   : -3.000
+
+------------------------------------------------------------

@@ -1,0 +1,13 @@
+{application,jwerl,
+             [{description,"JWT Library for Erlang and Elixir"},
+              {vsn,"1.0.0"},
+              {registered,[]},
+              {modules,[jwerl,jwerl_es,jwerl_hs,jwerl_rs]},
+              {applications,[kernel,stdlib,jsx]},
+              {env,[]},
+              {maintainers,["Gregoire Lejeune"]},
+              {licenses,["BSD-3"]},
+              {links,[{"Github","https://github.com/emedia-project/jwerl"}]},
+              {files,["src/*","lib/*","Makefile","bu.mk","README.md",
+                      "rebar.config","rebar.lock","mix.exs","mix.lock"]},
+              {build_tools,["rebar3","mix","make"]}]}.

@@ -1,0 +1,10 @@
+{application,emqx_sn,
+             [{description,"EMQ X MQTT SN Plugin"},
+              {vsn,"3.0"},
+              {modules, ['emqx_sn_app','emqx_sn_asleep_timer','emqx_sn_broadcast','emqx_sn_config','emqx_sn_frame','emqx_sn_gateway','emqx_sn_gateway_sup','emqx_sn_registry','emqx_sn_return_codes','emqx_sn_sup']},
+              {registered,[]},
+              {applications,[kernel,stdlib,esockd,clique,emqx]},
+              {env,[]},
+              {mod,{emqx_sn_app,[]}},
+              {licenses,["Apache-2.0"]},
+              {links,["Github","https://github.com/emqx/emqx-sn"]}]}.

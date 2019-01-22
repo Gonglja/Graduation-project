@@ -1,0 +1,10 @@
+{application,emqx_coap,
+             [{description,"EMQ X CoAP Gateway"},
+              {vsn,"3.0"},
+              {modules, ['emqx_coap_app','emqx_coap_config','emqx_coap_mqtt_adapter','emqx_coap_ps_resource','emqx_coap_ps_topics','emqx_coap_registry','emqx_coap_resource','emqx_coap_server','emqx_coap_sup','emqx_coap_timer']},
+              {mod,{emqx_coap_app,[]}},
+              {registered,[]},
+              {applications,[kernel,stdlib,clique,gen_coap]},
+              {env,[]},
+              {licenses,["Apache-2.0"]},
+              {links,["Github","https://github.com/emqx/emqx-coap"]}]}.

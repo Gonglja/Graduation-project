@@ -1,0 +1,12 @@
+{application,esockd,
+             [{id,"esockd"},
+              {vsn,"5.4.3"},
+              {description,"General Non-blocking TCP/SSL Server"},
+              {modules, ['esockd','esockd_acceptor','esockd_acceptor_sup','esockd_access','esockd_app','esockd_cidr','esockd_connection_sup','esockd_dtls_acceptor','esockd_dtls_acceptor_sup','esockd_dtls_listener_sup','esockd_keepalive','esockd_listener','esockd_listener_sup','esockd_net','esockd_peercert','esockd_proxy_protocol','esockd_rate_limit','esockd_rate_limiter','esockd_server','esockd_ssl','esockd_sup','esockd_transport','esockd_udp','esockd_util']},
+              {registered,[]},
+              {applications,[kernel,stdlib,ssl]},
+              {mod,{esockd_app,[]}},
+              {env,[]},
+              {maintainers,["Feng Lee <feng@emqx.io>"]},
+              {licenses,["Apache-2.0"]},
+              {links,[{"Github","https://github.com/emqx/esockd"}]}]}.
