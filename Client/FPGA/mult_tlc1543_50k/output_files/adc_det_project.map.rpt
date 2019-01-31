@@ -1,0 +1,954 @@
+Analysis & Synthesis report for adc_det_project
+Mon Jan 28 23:15:33 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: lcd1602:lcd1602
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
+ 15. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4
+ 16. Parameter Settings for Inferred Entity Instance: lpm_divide:Div4
+ 17. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 18. Parameter Settings for Inferred Entity Instance: lpm_divide:Div3
+ 19. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3
+ 20. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 21. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod6
+ 22. Parameter Settings for Inferred Entity Instance: lpm_divide:Div5
+ 23. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod7
+ 24. Port Connectivity Checks: "lcd1602:lcd1602"
+ 25. Port Connectivity Checks: "tlc1543_top:tlc1543_top|tlc1543:tlc1543"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jan 28 23:15:33 2019       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; adc_det_project                             ;
+; Top-level Entity Name              ; adc_det_project                             ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 870                                         ;
+;     Total combinational functions  ; 848                                         ;
+;     Dedicated logic registers      ; 119                                         ;
+; Total registers                    ; 119                                         ;
+; Total pins                         ; 18                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                                      ; adc_det_project    ; adc_det_project    ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; src/tlc1543_top.v                ; yes             ; User Verilog HDL File        ; D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543_top.v          ;         ;
+; src/tlc1543.v                    ; yes             ; User Verilog HDL File        ; D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543.v              ;         ;
+; src/lcd1602.v                    ; yes             ; User Verilog HDL File        ; D:/project/FPGA/Quartus/mult_tlc1543_50k/src/lcd1602.v              ;         ;
+; src/adc_det_project.v            ; yes             ; User Verilog HDL File        ; D:/project/FPGA/Quartus/mult_tlc1543_50k/src/adc_det_project.v      ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_divide.tdf       ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/abs_divider.inc      ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/sign_div_unsign.inc  ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc       ;         ;
+; db/lpm_divide_ccm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/lpm_divide_ccm.tdf      ;         ;
+; db/sign_div_unsign_1nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/sign_div_unsign_1nh.tdf ;         ;
+; db/alt_u_div_m9f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/alt_u_div_m9f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_2bm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/lpm_divide_2bm.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_27f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/alt_u_div_27f.tdf       ;         ;
+; db/lpm_divide_ihm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/lpm_divide_ihm.tdf      ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/sign_div_unsign_akh.tdf ;         ;
+; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/alt_u_div_84f.tdf       ;         ;
+; db/lpm_divide_vim.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/lpm_divide_vim.tdf      ;         ;
+; db/lpm_divide_9km.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/lpm_divide_9km.tdf      ;         ;
+; db/lpm_divide_vam.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/lpm_divide_vam.tdf      ;         ;
+; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/sign_div_unsign_klh.tdf ;         ;
+; db/alt_u_div_s6f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/project/FPGA/Quartus/mult_tlc1543_50k/db/alt_u_div_s6f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 870       ;
+;                                             ;           ;
+; Total combinational functions               ; 848       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 235       ;
+;     -- 3 input functions                    ; 201       ;
+;     -- <=2 input functions                  ; 412       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 583       ;
+;     -- arithmetic mode                      ; 265       ;
+;                                             ;           ;
+; Total registers                             ; 119       ;
+;     -- Dedicated logic registers            ; 119       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 18        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 119       ;
+; Total fan-out                               ; 2754      ;
+; Average fan-out                             ; 2.75      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                  ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
+; |adc_det_project                       ; 848 (0)           ; 119 (0)      ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |adc_det_project                                                                                                 ;              ;
+;    |lcd1602:lcd1602|                   ; 135 (135)         ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lcd1602:lcd1602                                                                                 ;              ;
+;    |lpm_divide:Div0|                   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div0                                                                                 ;              ;
+;       |lpm_divide_9km:auto_generated|  ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div0|lpm_divide_9km:auto_generated                                                   ;              ;
+;          |sign_div_unsign_1nh:divider| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider                       ;              ;
+;             |alt_u_div_m9f:divider|    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider ;              ;
+;    |lpm_divide:Div1|                   ; 72 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div1                                                                                 ;              ;
+;       |lpm_divide_vim:auto_generated|  ; 72 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div1|lpm_divide_vim:auto_generated                                                   ;              ;
+;          |sign_div_unsign_nlh:divider| ; 72 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div1|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider                       ;              ;
+;             |alt_u_div_27f:divider|    ; 72 (72)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div1|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ;              ;
+;    |lpm_divide:Div2|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div2                                                                                 ;              ;
+;       |lpm_divide_ihm:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div2|lpm_divide_ihm:auto_generated                                                   ;              ;
+;          |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div2|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ;              ;
+;             |alt_u_div_84f:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div2|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ;              ;
+;    |lpm_divide:Div3|                   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div3                                                                                 ;              ;
+;       |lpm_divide_9km:auto_generated|  ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div3|lpm_divide_9km:auto_generated                                                   ;              ;
+;          |sign_div_unsign_1nh:divider| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div3|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider                       ;              ;
+;             |alt_u_div_m9f:divider|    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div3|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider ;              ;
+;    |lpm_divide:Div4|                   ; 72 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div4                                                                                 ;              ;
+;       |lpm_divide_vim:auto_generated|  ; 72 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div4|lpm_divide_vim:auto_generated                                                   ;              ;
+;          |sign_div_unsign_nlh:divider| ; 72 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div4|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider                       ;              ;
+;             |alt_u_div_27f:divider|    ; 72 (72)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div4|lpm_divide_vim:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ;              ;
+;    |lpm_divide:Div5|                   ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div5                                                                                 ;              ;
+;       |lpm_divide_ihm:auto_generated|  ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div5|lpm_divide_ihm:auto_generated                                                   ;              ;
+;          |sign_div_unsign_akh:divider| ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div5|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                       ;              ;
+;             |alt_u_div_84f:divider|    ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Div5|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider ;              ;
+;    |lpm_divide:Mod0|                   ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod0                                                                                 ;              ;
+;       |lpm_divide_ccm:auto_generated|  ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod0|lpm_divide_ccm:auto_generated                                                   ;              ;
+;          |sign_div_unsign_1nh:divider| ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider                       ;              ;
+;             |alt_u_div_m9f:divider|    ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider ;              ;
+;    |lpm_divide:Mod2|                   ; 88 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod2                                                                                 ;              ;
+;       |lpm_divide_2bm:auto_generated|  ; 88 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod2|lpm_divide_2bm:auto_generated                                                   ;              ;
+;          |sign_div_unsign_nlh:divider| ; 88 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod2|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider                       ;              ;
+;             |alt_u_div_27f:divider|    ; 88 (88)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod2|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ;              ;
+;    |lpm_divide:Mod3|                   ; 85 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod3                                                                                 ;              ;
+;       |lpm_divide_vam:auto_generated|  ; 85 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod3|lpm_divide_vam:auto_generated                                                   ;              ;
+;          |sign_div_unsign_klh:divider| ; 85 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod3|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider                       ;              ;
+;             |alt_u_div_s6f:divider|    ; 85 (85)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod3|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ;              ;
+;    |lpm_divide:Mod4|                   ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod4                                                                                 ;              ;
+;       |lpm_divide_ccm:auto_generated|  ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod4|lpm_divide_ccm:auto_generated                                                   ;              ;
+;          |sign_div_unsign_1nh:divider| ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod4|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider                       ;              ;
+;             |alt_u_div_m9f:divider|    ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod4|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider ;              ;
+;    |lpm_divide:Mod6|                   ; 79 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod6                                                                                 ;              ;
+;       |lpm_divide_2bm:auto_generated|  ; 79 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod6|lpm_divide_2bm:auto_generated                                                   ;              ;
+;          |sign_div_unsign_nlh:divider| ; 79 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod6|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider                       ;              ;
+;             |alt_u_div_27f:divider|    ; 79 (79)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod6|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider ;              ;
+;    |lpm_divide:Mod7|                   ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod7                                                                                 ;              ;
+;       |lpm_divide_vam:auto_generated|  ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod7|lpm_divide_vam:auto_generated                                                   ;              ;
+;          |sign_div_unsign_klh:divider| ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod7|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider                       ;              ;
+;             |alt_u_div_s6f:divider|    ; 82 (82)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|lpm_divide:Mod7|lpm_divide_vam:auto_generated|sign_div_unsign_klh:divider|alt_u_div_s6f:divider ;              ;
+;    |tlc1543_top:tlc1543_top|           ; 78 (4)            ; 69 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|tlc1543_top:tlc1543_top                                                                         ;              ;
+;       |tlc1543:tlc1543|                ; 74 (74)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adc_det_project|tlc1543_top:tlc1543_top|tlc1543:tlc1543                                                         ;              ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                ;
++---------------------------------------------+---------------------------------------------------------------------+
+; Register name                               ; Reason for Removal                                                  ;
++---------------------------------------------+---------------------------------------------------------------------+
+; lcd1602:lcd1602|state1[7..11]               ; Stuck at GND due to stuck port data_in                              ;
+; tlc1543_top:tlc1543_top|tlc_channel_sw[0,2] ; Stuck at GND due to stuck port data_in                              ;
+; tlc1543_top:tlc1543_top|tlc1543_eoc_reg     ; Merged with tlc1543_top:tlc1543_top|tlc1543:tlc1543|tlc1543_eoc_reg ;
+; Total Number of Removed Registers = 8       ;                                                                     ;
++---------------------------------------------+---------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 119   ;
+; Number of registers using Synchronous Clear  ; 35    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 119   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 53    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |adc_det_project|tlc1543_top:tlc1543_top|tlc1543:tlc1543|tlc_time_cnt[13] ;
+; 65:1               ; 2 bits    ; 86 LEs        ; 26 LEs               ; 60 LEs                 ; Yes        ; |adc_det_project|lcd1602:lcd1602|lcd_data[4]                              ;
+; 65:1               ; 4 bits    ; 172 LEs       ; 64 LEs               ; 108 LEs                ; Yes        ; |adc_det_project|lcd1602:lcd1602|lcd_data[1]                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd1602:lcd1602 ;
++----------------+----------+----------------------------------+
+; Parameter Name ; Value    ; Type                             ;
++----------------+----------+----------------------------------+
+; Mode_Set       ; 00111000 ; Unsigned Binary                  ;
+; Cursor_Set     ; 00001100 ; Unsigned Binary                  ;
+; Address_Set    ; 00000110 ; Unsigned Binary                  ;
+; Clear_Set      ; 00000001 ; Unsigned Binary                  ;
++----------------+----------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_ccm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_2bm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div2 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_ccm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div4 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_vim ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_9km ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div3 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_9km ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_vam ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_vim ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod6 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_2bm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div5 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod7 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_vam ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd1602:lcd1602"                                                                                                                                                                            ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                                                             ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data0         ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data0[11..8]" will be connected to GND.                                     ;
+; data0[2..1]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data0[11]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data0[10]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data0[9]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data0[8]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data0[7]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data0[4]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data1         ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data1[11..8]" will be connected to GND.                                     ;
+; data1[5..4]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data1[7..6]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data1[3..1]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data1[4]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data2         ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data2[11..8]" will be connected to GND.                                     ;
+; data2[5..3]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data2[7..6]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data2[6]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data2[5]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data2[4]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data3         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data3[11]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data4         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data4[11]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data5         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data5[11..8]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data6         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data6[5..4]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data6[11..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data7         ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data7[11..8]" will be connected to GND.                                     ;
+; data7[7..6]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data7[4..0]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data7[9]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data8         ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data8[11..8]" will be connected to GND.                                     ;
+; data8[7..6]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data8[4..0]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data8[9]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data9         ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data9[11..8]" will be connected to GND.                                     ;
+; data9[7..6]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data9[4..0]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data9[9]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data10        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data10[11..8]" will be connected to GND.                                    ;
+; data10[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data10[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data10[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data11        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data11[11..8]" will be connected to GND.                                    ;
+; data11[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data11[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data11[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data12        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data12[11..8]" will be connected to GND.                                    ;
+; data12[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data12[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data12[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data13        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data13[11..8]" will be connected to GND.                                    ;
+; data13[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data13[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data13[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data14        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data14[11..8]" will be connected to GND.                                    ;
+; data14[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data14[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data14[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data15        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data15[11..8]" will be connected to GND.                                    ;
+; data15[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data15[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data15[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data16        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data16[11..8]" will be connected to GND.                                    ;
+; data16[2..1]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data16[11]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data16[10]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data16[9]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data16[8]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data16[7]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data16[4]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data17        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data17[11..8]" will be connected to GND.                                    ;
+; data17[5..4]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data17[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data17[3..2]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data17[5]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data17[4]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data18        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data18[11..8]" will be connected to GND.                                    ;
+; data18[5..3]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data18[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data18[6]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data18[5]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data18[4]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data19        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data19[11]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data20        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data20[11]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data21        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data21[11..8] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data22        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (12 bits) it drives.  The 20 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data22[5..4]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data22[11..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data23        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data23[11..8]" will be connected to GND.                                    ;
+; data23[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data23[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data23[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data24        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data24[11..8]" will be connected to GND.                                    ;
+; data24[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data24[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data24[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data25        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data25[11..8]" will be connected to GND.                                    ;
+; data25[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data25[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data25[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data26        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data26[11..8]" will be connected to GND.                                    ;
+; data26[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data26[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data26[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data27        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data27[11..8]" will be connected to GND.                                    ;
+; data27[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data27[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data27[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data28        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data28[11..8]" will be connected to GND.                                    ;
+; data28[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data28[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data28[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data29        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data29[11..8]" will be connected to GND.                                    ;
+; data29[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data29[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data29[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data30        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data30[11..8]" will be connected to GND.                                    ;
+; data30[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data30[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data30[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; data31        ; Input ; Warning  ; Input port expression (8 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "data31[11..8]" will be connected to GND.                                    ;
+; data31[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data31[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; data31[9]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tlc1543_top:tlc1543_top|tlc1543:tlc1543"                                                      ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; tlc1543_eoc_ok ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Mon Jan 28 23:15:30 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adc_det_project -c adc_det_project
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file src/tlc_1543_tb.v
+    Info (12023): Found entity 1: tlc_1543_tb
+Info (12021): Found 1 design units, including 1 entities, in source file src/tlc1543_top.v
+    Info (12023): Found entity 1: tlc1543_top
+Info (12021): Found 1 design units, including 1 entities, in source file src/tlc1543.v
+    Info (12023): Found entity 1: tlc1543
+Info (12021): Found 1 design units, including 1 entities, in source file src/tlc1543_tb.v
+    Info (12023): Found entity 1: tlc1543_tb
+Info (12021): Found 1 design units, including 1 entities, in source file src/lcd1602.v
+    Info (12023): Found entity 1: lcd1602
+Info (12021): Found 1 design units, including 1 entities, in source file src/adc_det_project.v
+    Info (12023): Found entity 1: adc_det_project
+Info (12127): Elaborating entity "adc_det_project" for the top level hierarchy
+Info (12128): Elaborating entity "tlc1543_top" for hierarchy "tlc1543_top:tlc1543_top"
+Info (12128): Elaborating entity "tlc1543" for hierarchy "tlc1543_top:tlc1543_top|tlc1543:tlc1543"
+Warning (10230): Verilog HDL assignment warning at tlc1543.v(145): truncated value with size 4 to match size of target (1)
+Info (12128): Elaborating entity "lcd1602" for hierarchy "lcd1602:lcd1602"
+Warning (10036): Verilog HDL or VHDL warning at lcd1602.v(39): object "dat0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at lcd1602.v(39): object "dat1" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(170): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(180): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(190): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(200): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(210): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(220): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(230): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(240): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(250): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(260): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(270): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(280): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(290): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(300): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(310): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(320): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(341): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(351): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(361): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(371): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(381): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(391): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(401): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(411): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(421): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(431): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(441): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(451): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(461): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(471): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(481): truncated value with size 12 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at lcd1602.v(491): truncated value with size 12 to match size of target (8)
+Info (278001): Inferred 12 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod4"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div4"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod6"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div5"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod7"
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ccm.tdf
+    Info (12023): Found entity 1: lpm_divide_ccm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_1nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_1nh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_m9f.tdf
+    Info (12023): Found entity 1: alt_u_div_m9f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2"
+Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2bm.tdf
+    Info (12023): Found entity 1: lpm_divide_2bm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_27f.tdf
+    Info (12023): Found entity 1: alt_u_div_27f
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2"
+Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ihm.tdf
+    Info (12023): Found entity 1: lpm_divide_ihm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
+    Info (12023): Found entity 1: alt_u_div_84f
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div4"
+Info (12133): Instantiated megafunction "lpm_divide:Div4" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vim.tdf
+    Info (12023): Found entity 1: lpm_divide_vim
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0"
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_9km.tdf
+    Info (12023): Found entity 1: lpm_divide_9km
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod3"
+Info (12133): Instantiated megafunction "lpm_divide:Mod3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vam.tdf
+    Info (12023): Found entity 1: lpm_divide_vam
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_klh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s6f.tdf
+    Info (12023): Found entity 1: alt_u_div_s6f
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "lcd_rw" is stuck at GND
+    Warning (13410): Pin "tlc1543_cs_n" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/project/FPGA/Quartus/mult_tlc1543_50k/output_files/adc_det_project.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 889 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 871 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 563 megabytes
+    Info: Processing ended: Mon Jan 28 23:15:33 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/project/FPGA/Quartus/mult_tlc1543_50k/output_files/adc_det_project.map.smsg.
+
+

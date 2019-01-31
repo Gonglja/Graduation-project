@@ -1,0 +1,123 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/project/FPGA/Quartus/mult_tlc1543_50k/simulation/modelsim
+T_opt
+Z1 !s110 1548688460
+V_A:>OU<[^mA6Jc?R1Ecfg3
+04 11 4 work tlc_1543_tb fast 0
+=1-80fa5b62e23f-5c4f1c4c-2ec-187c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vadc_det_project
+R1
+!i10b 1
+!s100 @_1WW[Jo`njLB]b]PeS3n2
+IY=M12GF3V0QQML4T?>40N3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1548684808
+8D:/project/FPGA/Quartus/mult_tlc1543_50k/src/adc_det_project.v
+FD:/project/FPGA/Quartus/mult_tlc1543_50k/src/adc_det_project.v
+L0 6
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1548688460.392000
+!s107 D:/project/FPGA/Quartus/mult_tlc1543_50k/src/adc_det_project.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/project/FPGA/Quartus/mult_tlc1543_50k/src|D:/project/FPGA/Quartus/mult_tlc1543_50k/src/adc_det_project.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 !s92 -vlog01compat -work work +incdir+D:/project/FPGA/Quartus/mult_tlc1543_50k/src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vlcd1602
+R1
+!i10b 1
+!s100 EdJ2M73]hABz=hXQOUo`]0
+IEz^2doNbFQ2Gg]ZSXjKbZ1
+R2
+R0
+w1548075031
+8D:/project/FPGA/Quartus/mult_tlc1543_50k/src/lcd1602.v
+FD:/project/FPGA/Quartus/mult_tlc1543_50k/src/lcd1602.v
+L0 9
+R3
+r1
+!s85 0
+31
+!s108 1548688460.322000
+!s107 D:/project/FPGA/Quartus/mult_tlc1543_50k/src/lcd1602.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/project/FPGA/Quartus/mult_tlc1543_50k/src|D:/project/FPGA/Quartus/mult_tlc1543_50k/src/lcd1602.v|
+!i113 0
+R4
+R5
+vtlc1543
+R1
+!i10b 1
+!s100 b^K]YV3^PoEOUjAJ1^:SO1
+IWU]G6`EIe6fFjffbe8hKg0
+R2
+R0
+w1548680769
+8D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543.v
+FD:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543.v
+Z6 L0 23
+R3
+r1
+!s85 0
+31
+!s108 1548688460.258000
+!s107 D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/project/FPGA/Quartus/mult_tlc1543_50k/src|D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543.v|
+!i113 0
+R4
+R5
+vtlc1543_top
+R1
+!i10b 1
+!s100 =5U@Ahob>1H8c?bQHUJ==0
+IWOOQCS[b6JIL160KMBh2m1
+R2
+R0
+w1548688438
+8D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543_top.v
+FD:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543_top.v
+R6
+R3
+r1
+!s85 0
+31
+!s108 1548688460.188000
+!s107 D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/project/FPGA/Quartus/mult_tlc1543_50k/src|D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc1543_top.v|
+!i113 0
+R4
+R5
+vtlc_1543_tb
+R1
+!i10b 1
+!s100 4g7SmHae=Dgd6H9C<TgeG2
+IM`8U_@]=<BTR6HzZ>`<j63
+R2
+R0
+w1548680768
+8D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc_1543_tb.v
+FD:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc_1543_tb.v
+R6
+R3
+r1
+!s85 0
+31
+!s108 1548688460.460000
+!s107 D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc_1543_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/project/FPGA/Quartus/mult_tlc1543_50k/src|D:/project/FPGA/Quartus/mult_tlc1543_50k/src/tlc_1543_tb.v|
+!i113 0
+R4
+R5

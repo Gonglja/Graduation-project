@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Jan 28 23:15:33 2019
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : adc_det_project
+Top-level Entity Name : adc_det_project
+Family : Cyclone IV E
+Total logic elements : 870
+    Total combinational functions : 848
+    Dedicated logic registers : 119
+Total registers : 119
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
