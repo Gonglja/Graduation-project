@@ -1,0 +1,6 @@
+module temp_tp();
+
+
+temp(clk,nRST,Data,data1);
+
+endmodule

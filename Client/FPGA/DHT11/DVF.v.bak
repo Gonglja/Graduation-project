@@ -1,0 +1,33 @@
+module DVF(CLK_50Mhz,clkout,clkout1);
+input CLK_50Mhz;
+output reg clkout,clkout1;
+parameter divd=25;
+parameter divd1=50;
+reg[7:0] cnt,cnt1;
+initial begin
+	 cnt<=8'b0;
+	 clkout<=1'b0;
+	 end
+always@(posedge CLK_50Mhz)
+	begin
+	if(cnt<divd)
+		cnt<=cnt+8'b1;
+	else
+	  begin
+		cnt<=8'b0;
+		clkout<=~clkout;
+	  end
+	end
+	
+	
+	always@(posedge CLK_50Mhz)
+	begin
+	if(cnt1<divd1)
+		cnt1<=cnt1+8'b1;
+	else
+	  begin
+		cnt1<=8'b0;
+		clkout1<=~clkout1;
+	  end
+	end
+endmodule 

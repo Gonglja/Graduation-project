@@ -1,0 +1,16 @@
+
+State Machine - |webdu|temp:Temp|state
+Name state.state12 state.state11 state.state10 state.state9 state.state8 state.state7 state.state6 state.state5 state.state4 state.state3 state.state2 state.state1 state.00000 
+state.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.state1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.state2 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.state3 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.state4 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.state5 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.state6 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.state7 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.state8 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.state9 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.state10 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.state11 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.state12 1 0 0 0 0 0 0 0 0 0 0 0 1 
