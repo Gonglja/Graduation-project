@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("C:/Users/Administrator/Desktop/yangguo_DHT11(completed)/") File("webdu.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("D:/Data/git/Graduation project/Client/FPGA/DHT11/") File("webdu.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

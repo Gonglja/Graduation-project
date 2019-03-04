@@ -29,9 +29,29 @@ parameter state12=12;
 
 //确定Data端口到底是作为输入还是输出  1输出 0输入
 assign Data=(flag)?data_reg:1'bz;
-always @(posedge clk or negedge nRST )
+
+reg [15:0]cnt;
+reg clk_nRST;
+always @(posedge clk or negedge nRST )begin
+	if(!nRST)begin
+		cnt <= 16'd0;
+	   clk_nRST <= 0;	
+	end
+	else begin
+		if(cnt ==16'd60000 -1 )begin
+		   cnt <= 16'd0;
+			clk_nRST <=0;
+		end 
+		else begin
+			cnt <= cnt + 1'b1;
+			clk_nRST <= 1;
+		end
+	end
+
+end
+always @(posedge clk or negedge clk_nRST )
 begin
-	if(!nRST)
+	if(!clk_nRST)
 		begin
 			  state<=0 ;
 			  data<=0;

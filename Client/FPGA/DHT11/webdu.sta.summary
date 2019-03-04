@@ -3,19 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -14.654
-TNS   : -198.823
+Slack : -16.854
+TNS   : -193.647
 
 Type  : Slow 1200mV 85C Model Setup 'DVF:dvf|clkout'
-Slack : -5.067
-TNS   : -423.532
+Slack : -4.937
+TNS   : -420.689
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.086
-TNS   : -0.086
+Slack : -0.082
+TNS   : -0.082
 
 Type  : Slow 1200mV 85C Model Hold 'DVF:dvf|clkout'
-Slack : 0.453
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'DVF:dvf|clkout'
+Slack : -1.309
+TNS   : -46.490
+
+Type  : Slow 1200mV 85C Model Removal 'DVF:dvf|clkout'
+Slack : 1.123
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -24,22 +32,30 @@ TNS   : -90.733
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DVF:dvf|clkout'
 Slack : -1.487
-TNS   : -185.875
+TNS   : -199.258
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -13.401
-TNS   : -177.030
+Slack : -15.293
+TNS   : -171.429
 
 Type  : Slow 1200mV 0C Model Setup 'DVF:dvf|clkout'
-Slack : -4.689
-TNS   : -392.279
+Slack : -4.602
+TNS   : -388.437
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.065
-TNS   : -0.065
+Slack : -0.045
+TNS   : -0.045
 
 Type  : Slow 1200mV 0C Model Hold 'DVF:dvf|clkout'
-Slack : 0.403
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'DVF:dvf|clkout'
+Slack : -1.156
+TNS   : -38.641
+
+Type  : Slow 1200mV 0C Model Removal 'DVF:dvf|clkout'
+Slack : 0.976
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -48,30 +64,38 @@ TNS   : -90.733
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DVF:dvf|clkout'
 Slack : -1.487
-TNS   : -185.875
+TNS   : -199.258
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -5.747
-TNS   : -53.087
+Slack : -6.721
+TNS   : -51.916
 
 Type  : Fast 1200mV 0C Model Setup 'DVF:dvf|clkout'
-Slack : -1.559
-TNS   : -115.847
+Slack : -1.450
+TNS   : -107.002
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.222
-TNS   : -0.222
+Slack : -0.214
+TNS   : -0.214
 
 Type  : Fast 1200mV 0C Model Hold 'DVF:dvf|clkout'
-Slack : 0.186
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'DVF:dvf|clkout'
+Slack : -0.072
+TNS   : -0.234
+
+Type  : Fast 1200mV 0C Model Removal 'DVF:dvf|clkout'
+Slack : 0.478
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -65.858
+TNS   : -65.795
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DVF:dvf|clkout'
 Slack : -1.000
-TNS   : -125.000
+TNS   : -134.000
 
 ------------------------------------------------------------

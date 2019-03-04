@@ -1,13 +1,14 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="webdu">
-		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_jhm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_jhm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_m9m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_m9m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_jhm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_jhm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_ihm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_p9m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_mhm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_mhm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_m9m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Mod3" CBX_FILE_NAME="lpm_divide_m9m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_ihm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_p9m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|webdu|lpm_divide:Mod4" CBX_FILE_NAME="lpm_divide_m9m.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

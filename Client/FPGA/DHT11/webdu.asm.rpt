@@ -1,5 +1,5 @@
 Assembler report for webdu
-Fri Nov 30 15:23:25 2018
+Mon Mar 04 12:13:13 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Administrator/Desktop/yangguo_DHT11(completed)/webdu.sof
+  5. Assembler Device Options: D:/Data/git/Graduation project/Client/FPGA/DHT11/webdu.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Nov 30 15:23:25 2018 ;
+; Assembler Status      ; Successful - Mon Mar 04 12:13:13 2019 ;
 ; Revision Name         ; webdu                                 ;
 ; Top-level Entity Name ; webdu                                 ;
 ; Family                ; Cyclone IV E                          ;
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Assembler Generated Files                                         ;
-+-------------------------------------------------------------------+
-; File Name                                                         ;
-+-------------------------------------------------------------------+
-; C:/Users/Administrator/Desktop/yangguo_DHT11(completed)/webdu.sof ;
-+-------------------------------------------------------------------+
++------------------------------------------------------------+
+; Assembler Generated Files                                  ;
++------------------------------------------------------------+
+; File Name                                                  ;
++------------------------------------------------------------+
+; D:/Data/git/Graduation project/Client/FPGA/DHT11/webdu.sof ;
++------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Administrator/Desktop/yangguo_DHT11(completed)/webdu.sof ;
-+----------------+----------------------------------------------------------------------------+
-; Option         ; Setting                                                                    ;
-+----------------+----------------------------------------------------------------------------+
-; Device         ; EP4CE6E22C8                                                                ;
-; JTAG usercode  ; 0x000E8607                                                                 ;
-; Checksum       ; 0x000E8607                                                                 ;
-+----------------+----------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Data/git/Graduation project/Client/FPGA/DHT11/webdu.sof ;
++----------------+---------------------------------------------------------------------+
+; Option         ; Setting                                                             ;
++----------------+---------------------------------------------------------------------+
+; Device         ; EP4CE6E22C8                                                         ;
+; JTAG usercode  ; 0x000E2817                                                          ;
+; Checksum       ; 0x000E2817                                                          ;
++----------------+---------------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Fri Nov 30 15:23:24 2018
+    Info: Processing started: Mon Mar 04 12:13:12 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off webdu -c webdu
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 430 megabytes
-    Info: Processing ended: Fri Nov 30 15:23:25 2018
+    Info: Peak virtual memory: 4565 megabytes
+    Info: Processing ended: Mon Mar 04 12:13:13 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

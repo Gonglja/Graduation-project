@@ -126,7 +126,7 @@ RESERVED_INPUT               : 55        :        :                   :         
 VCCIO4                       : 56        : power  :                   : 2.5V    : 4         :                
 GND                          : 57        : gnd    :                   :         :           :                
 RESERVED_INPUT               : 58        :        :                   :         : 4         :                
-lcd_rw                       : 59        : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT               : 59        :        :                   :         : 4         :                
 RESERVED_INPUT               : 60        :        :                   :         : 4         :                
 VCCINT                       : 61        : power  :                   : 1.2V    :           :                
 VCCIO4                       : 62        : power  :                   : 2.5V    : 4         :                
@@ -139,7 +139,7 @@ RESERVED_INPUT               : 68        :        :                   :         
 RESERVED_INPUT               : 69        :        :                   :         : 4         :                
 RESERVED_INPUT               : 70        :        :                   :         : 4         :                
 RESERVED_INPUT               : 71        :        :                   :         : 4         :                
-RESERVED_INPUT               : 72        :        :                   :         : 4         :                
+lcd_rw                       : 72        : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT               : 73        :        :                   :         : 5         :                
 RESERVED_INPUT               : 74        :        :                   :         : 5         :                
 RESERVED_INPUT               : 75        :        :                   :         : 5         :                
