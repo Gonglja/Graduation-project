@@ -46,7 +46,6 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
@@ -57,24 +56,31 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id dht11_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME dht11_tb -section_id dht11_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE src/dht11_tb.v -section_id dht11_tb
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_11 -to LCD_D[7]
-set_location_assignment PIN_7 -to LCD_D[6]
-set_location_assignment PIN_10 -to LCD_D[5]
-set_location_assignment PIN_2 -to LCD_D[4]
-set_location_assignment PIN_3 -to LCD_D[3]
-set_location_assignment PIN_144 -to LCD_D[2]
-set_location_assignment PIN_1 -to LCD_D[1]
-set_location_assignment PIN_142 -to LCD_D[0]
-set_location_assignment PIN_143 -to LCD_E
-set_location_assignment PIN_141 -to LCD_RS
-set_location_assignment PIN_138 -to LCD_RW
-set_location_assignment PIN_23 -to clk_50m
-set_location_assignment PIN_80 -to dht11_io
-set_location_assignment PIN_25 -to rst_n
+set_location_assignment PIN_99 -to LCD_D[7]
+set_location_assignment PIN_100 -to LCD_D[6]
+set_location_assignment PIN_101 -to LCD_D[5]
+set_location_assignment PIN_103 -to LCD_D[4]
+set_location_assignment PIN_104 -to LCD_D[3]
+set_location_assignment PIN_105 -to LCD_D[2]
+set_location_assignment PIN_106 -to LCD_D[1]
+set_location_assignment PIN_110 -to LCD_D[0]
+set_location_assignment PIN_111 -to LCD_E
+set_location_assignment PIN_115 -to LCD_RS
+set_location_assignment PIN_66 -to LCD_RW
+set_location_assignment PIN_91 -to clk_50m
+set_location_assignment PIN_34 -to dht11_io
+set_location_assignment PIN_90 -to rst_n
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE src/lcd1602.v
 set_global_assignment -name VERILOG_FILE src/equip_sys_top.v
 set_global_assignment -name VERILOG_FILE src/dht11.v
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

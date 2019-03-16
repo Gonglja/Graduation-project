@@ -4,7 +4,7 @@
 //modulename:dht11
 //Author    :moyunjie
 //Date	    :2016-1-13
-//Function  :ÎÂÊª¶È¼Ædht11µÄÊı¾İ²É¼¯£¬²É¼¯¼ä¸ô1s
+//Function  :æ¸©æ¹¿åº¦è®¡dht11çš„æ•°æ®é‡‡é›†ï¼Œé‡‡é›†é—´éš”1s
 //==========================================================================
 module dht11(
 						i_clk,
@@ -15,23 +15,23 @@ module dht11(
 							);
 
 input i_clk;//50mhz
-input i_rst_n;//µÍµçÆ½¸´Î»
-inout io_data;//Êı¾İ¶Ë¿Ú
-output reg [7:0]o_temp;//Êä³öÎÂ¶È
-output reg [7:0]o_humi;//Êä³öÊª¶È
-reg o_data;//Êä³öÊı¾İ
+input i_rst_n;//ä½ç”µå¹³å¤ä½
+inout io_data;//æ•°æ®ç«¯å£
+output reg [15:0]o_temp;//è¾“å‡ºæ¸©åº¦
+output reg [15:0]o_humi;//è¾“å‡ºæ¹¿åº¦
+reg o_data;//è¾“å‡ºæ•°æ®
 
 
 
-reg [39:0]get_data;//dht11»ñÈ¡µÄÊı¾İ
-reg [5:0]data_num;//»ñÈ¡Êı¾İµÄÎ»Êı
-reg[3:0]crt_state;//Èı¶Î×´Ì¬»ú
+reg [39:0]get_data;//dht11è·å–çš„æ•°æ®
+reg [5:0]data_num;//è·å–æ•°æ®çš„ä½æ•°
+reg[3:0]crt_state;//ä¸‰æ®µçŠ¶æ€æœº
 reg [3:0]next_state;
-parameter idle		= 4'b0001;//¿ÕÏĞ×´Ì¬
-parameter init		= 4'b0010;//Ö÷»úÇëÇó¸´Î»×´Ì¬
-parameter ans 		= 4'b0100;//´Ó»úÓ¦´ğ
-parameter rd_data	= 4'b1000;//½ÓÊÜÊı¾İ
-/////////============×´Ì¬»ú
+parameter idle		= 4'b0001;//ç©ºé—²çŠ¶æ€
+parameter init		= 4'b0010;//ä¸»æœºè¯·æ±‚å¤ä½çŠ¶æ€
+parameter ans 		= 4'b0100;//ä»æœºåº”ç­”
+parameter rd_data	= 4'b1000;//æ¥å—æ•°æ®
+/////////============çŠ¶æ€æœº
 always@(posedge i_clk or negedge i_rst_n )
 				if(!i_rst_n)
 						crt_state<=idle;
@@ -39,17 +39,17 @@ always@(posedge i_clk or negedge i_rst_n )
 						crt_state<=next_state;
 
 
-reg data_sam1;//ÊäÈë²ÉÑù1
-reg data_sam2;//ÊäÈë²ÉÑù2
+reg data_sam1;//è¾“å…¥é‡‡æ ·1
+reg data_sam2;//è¾“å…¥é‡‡æ ·2
 
-reg data_pluse;//¼ì²âÊäÈëÉÏÉıÑØÂö³å
+reg data_pluse;//æ£€æµ‹è¾“å…¥ä¸Šå‡æ²¿è„‰å†²
 always@(posedge i_clk )
 begin
 	data_sam1<=io_data;
 	data_sam2<=data_sam1;
 	data_pluse<=(~data_sam2)&data_sam1;
 end
-reg[26:0] cnt_1s;//1s¼ÆÊıÆ÷  
+reg[26:0] cnt_1s;//1sè®¡æ•°å™¨  
 always@(posedge i_clk or negedge i_rst_n )
 	if(!i_rst_n)
 		cnt_1s<=27'd0;	
@@ -57,10 +57,10 @@ always@(posedge i_clk or negedge i_rst_n )
 		cnt_1s<=27'd0;
 	else
 		cnt_1s<=cnt_1s+1'b1;
-/////////============×´Ì¬»ú	
+/////////============çŠ¶æ€æœº	
 always@( *) 
 		case(crt_state)
-				idle:if(cnt_1s==27'd49999999)//1sºó¿ªÊ¼¹¤×÷
+				idle:if(cnt_1s==27'd49999999)//1såå¼€å§‹å·¥ä½œ
 								next_state=init;
 							else
 								next_state=crt_state;
@@ -70,41 +70,41 @@ always@( *)
 							else
 								next_state=crt_state;
 				
-				ans:	if(data_pluse)//¼ì²âµ½ÉÏÉıÑØ
+				ans:	if(data_pluse)//æ£€æµ‹åˆ°ä¸Šå‡æ²¿
 								next_state=rd_data;
 							else
 								next_state=crt_state;
 				
-				rd_data:if(data_num==6'd40)//ÊÕµ½40Î»Êı¾İ
+				rd_data:if(data_num==6'd40)//æ”¶åˆ°40ä½æ•°æ®
 									next_state=idle;
 								else
 									next_state=crt_state;
 				default:next_state=idle;
 		endcase
 		
-reg [12:0]cnt_40us;//40us¼ÆÊıÆ÷
-reg send_indi;//Ö÷»úÊä³öÖ¸Ê¾
-reg r_hold;//Î¬³Ö40us
+reg [12:0]cnt_40us;//40usè®¡æ•°å™¨
+reg send_indi;//ä¸»æœºè¾“å‡ºæŒ‡ç¤º
+reg r_hold;//ç»´æŒ40us
 always@(posedge i_clk )
-	if(crt_state[1] && (cnt_1s<=27'd1000000))//·¢ËÍ20ms£¨>18ms£©µÍµçÆ½
+	if(crt_state[1] && (cnt_1s<=27'd1000000))//å‘é€20msï¼ˆ>18msï¼‰ä½ç”µå¹³
 		begin
 			o_data<=1'b0;
 			send_indi<=1'b1;
 		end
-	else if(crt_state[1])//µÈ´ı40us£¬µçÆ½À­¸ß
+	else if(crt_state[1])//ç­‰å¾…40usï¼Œç”µå¹³æ‹‰é«˜
 		begin
 			o_data<=1'b1;
 			send_indi<=1'b0;
 		end
-	else if(crt_state[2] & data_pluse)//¼ì²âµ½dhtÀ­¸ß
+	else if(crt_state[2] & data_pluse)//æ£€æµ‹åˆ°dhtæ‹‰é«˜
 		begin
 			data_num<=6'd0;
 		end
-	else if(crt_state[3] & (data_pluse | r_hold))//½ÓÊÜÊı¾İ
+	else if(crt_state[3] & (data_pluse | r_hold))//æ¥å—æ•°æ®
 				begin
 					r_hold<=1'b1;
 					cnt_40us<=cnt_40us+1'b1;
-					if(cnt_40us==12'd2000)//¼ì²â¸ßµÍµçÆ½µÈ´ı40us£¨28<40<70£©ÔÙ¼ì²â¸ßµÍµçÆ½
+					if(cnt_40us==12'd2000)//æ£€æµ‹é«˜ä½ç”µå¹³ç­‰å¾…40usï¼ˆ28<40<70ï¼‰å†æ£€æµ‹é«˜ä½ç”µå¹³
 						begin
 							r_hold<=1'b0;
 							if(io_data)
@@ -117,14 +117,14 @@ always@(posedge i_clk )
 				end
 	else
 		begin
-			if(data_num==6'd40)//ÎÂÊª¶È¸³Öµ
+			if(data_num==6'd40)//æ¸©æ¹¿åº¦èµ‹å€¼
 				begin
-					o_humi<=get_data[39:32];
-					o_temp<=get_data[23:16];
+					o_humi<=get_data[39:24];
+					o_temp<=get_data[23:8];
 				end
 		end		
 
-assign io_data =send_indi ? o_data : 1'bz;//Ë«Ïò¶Ë¿Ú
+assign io_data =send_indi ? o_data : 1'bz;//åŒå‘ç«¯å£
 
 endmodule
 			 

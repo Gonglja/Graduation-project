@@ -16,8 +16,8 @@ module equip_sys_top
 	reg 			dht11_rst_n		;
 	
 		
-	wire [7:0] 	dht11_temp_dis		;
-	wire [7:0] 	dht11_humidity_dis	;
+	wire [15:0] 	dht11_temp_dis		;
+	wire [15:0] 	dht11_humidity_dis	;
 	
 	reg [31:0] delay_1s;
 	
@@ -59,30 +59,30 @@ module equip_sys_top
 	///////////////////////////////第一行////////////////////////////////////////////	
 		.data0	("T"),
 		.data1	(":"),
-		.data2	(8'h30+dht11_temp_dis/100		),
-		.data3	(8'h30+dht11_temp_dis%100/10	),
-		.data4	(8'h30+dht11_temp_dis%10		),
-		.data5	(" "),
-		.data6	("R"),
-		.data7	(":"),
-		.data8	(8'h30+dht11_humidity_dis/100		),
-		.data9	(8'h30+dht11_humidity_dis%100/10	),
-		.data10	(8'h30+dht11_humidity_dis%10		),
+		.data2	(8'h30+dht11_temp_dis[15:8]/100		),
+		.data3	(8'h30+dht11_temp_dis[15:8]%100/10	),
+		.data4	(8'h30+dht11_temp_dis[15:8]%10		),
+		.data5	("."),
+		.data6	(8'h30+dht11_temp_dis[7:0]/100		),
+		.data7	(8'h30+dht11_temp_dis[7:0]/100/10	),
+		.data8   (8'h30+dht11_temp_dis[7:0]%10		),
+		.data9	(" "),
+		.data10	(" "),
 		.data11	(" "),
 		.data12	(" "),
 		.data13	(" "),
 		.data14	(" "),
 		.data15	(" "),
 	///////////////////////////////第二行//////////////////////////////////////////////////	
-		.data16	(" "),
-		.data17	(" "),
-		.data18	(" "),
-		.data19	(" "),
-		.data20	(" "),
-		.data21	(" "),
-		.data22	(" "),
-		.data23	(" "),
-		.data24	(" "),
+		.data16	("H"),
+		.data17	(":"),
+		.data18	(8'h30+dht11_humidity_dis[15:8]/100		),
+		.data19	(8'h30+dht11_humidity_dis[15:8]%100/10	),
+		.data20	(8'h30+dht11_humidity_dis[15:8]%10		),
+		.data21	("."),
+		.data22	(8'h30+dht11_humidity_dis[7:0]/100		),
+		.data23	(8'h30+dht11_humidity_dis[7:0]%100/10	),
+		.data24	(8'h30+dht11_humidity_dis[7:0]%10	),
 		.data25	(" "),
 		.data26	(" "),
 		.data27	(" "),

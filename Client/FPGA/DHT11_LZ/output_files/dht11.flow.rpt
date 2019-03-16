@@ -1,0 +1,139 @@
+Flow report for dht11
+Mon Mar 04 11:17:52 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Mon Mar 04 11:17:52 2019      ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                      ; dht11                                      ;
+; Top-level Entity Name              ; equip_sys_top                              ;
+; Family                             ; Cyclone IV E                               ;
+; Device                             ; EP4CE6E22C8                                ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 916 / 6,272 ( 15 % )                       ;
+;     Total combinational functions  ; 871 / 6,272 ( 14 % )                       ;
+;     Dedicated logic registers      ; 211 / 6,272 ( 3 % )                        ;
+; Total registers                    ; 211                                        ;
+; Total pins                         ; 14 / 92 ( 15 % )                           ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                        ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                              ;
++------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/04/2019 11:17:35 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; dht11               ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++--------------------------------------+---------------------------------+---------------+---------------+----------------+
+; Assignment Name                      ; Value                           ; Default Value ; Entity Name   ; Section Id     ;
++--------------------------------------+---------------------------------+---------------+---------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 193744363239902.155166945505660 ; --            ; --            ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --            ; dht11_tb       ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; dht11_tb                        ; --            ; --            ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                     ; --            ; --            ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim (Verilog)              ; <None>        ; --            ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                 ; --            ; --            ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; src/dht11_tb.v                  ; --            ; --            ; dht11_tb       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; dht11_tb                        ; --            ; --            ; dht11_tb       ;
+; EDA_TEST_BENCH_NAME                  ; dht11_tb                        ; --            ; --            ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                            ; --            ; --            ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                              ; --            ; --            ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                               ; --            ; --            ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing               ; --            ; --            ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing               ; --            ; --            ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                      ; --            ; --            ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                      ; --            ; --            ; --             ;
+; PARTITION_COLOR                      ; 16764057                        ; --            ; equip_sys_top ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING           ; --            ; equip_sys_top ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                          ; --            ; equip_sys_top ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                    ; --            ; --            ; --             ;
+; TOP_LEVEL_ENTITY                     ; equip_sys_top                   ; dht11         ; --            ; --             ;
++--------------------------------------+---------------------------------+---------------+---------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4659 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:06     ; 1.8                     ; 5486 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4565 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4668 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4551 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:15                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; zzzzzz           ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; zzzzzz           ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; zzzzzz           ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; zzzzzz           ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; zzzzzz           ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off dht11 -c dht11
+quartus_fit --read_settings_files=off --write_settings_files=off dht11 -c dht11
+quartus_asm --read_settings_files=off --write_settings_files=off dht11 -c dht11
+quartus_sta dht11 -c dht11
+quartus_eda --read_settings_files=off --write_settings_files=off dht11 -c dht11
+
+
+
