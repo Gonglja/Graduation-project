@@ -6,14 +6,14 @@ User = "admin_esp"
 Pwd  = "0800"
 flag_mqttconnctl = 1
 led = machine.PWM(machine.Pin(2), freq=1000)
-# ä»è®¢é˜…æ¥æ”¶çš„æ¶ˆæ¯å°†ä¼ é€’åˆ°æ­¤å›è°ƒ
+# ´Ó¶©ÔÄ½ÓÊÕµÄÏûÏ¢½«´«µİµ½´Ë»Øµ÷
 def sub_cb(topic, msg):
     print(topic, msg)
     global flag_mqttconnctl
     
     if topic==b'L':
         if msg==b'ledon':
-            led.duty(0) #å› ä¸ºå®é™…IOä¸º0ffæ—¶ç¯æ˜¯äº®çš„
+            led.duty(0) #ÒòÎªÊµ¼ÊIOÎª0ffÊ±µÆÊÇÁÁµÄ
         if msg==b'ledoff':
             led.duty(1023)
     if topic==b'MC':
@@ -25,10 +25,10 @@ def mqttconnect(server="localhost",port=1883):
     c = MQTTClient("umqtt_client", server,port,User,Pwd)
     c.set_callback(sub_cb)
     c.connect()
-    c.subscribe(b"L") #è®¢é˜…ledæ§åˆ¶ä¸»é¢˜
-    c.subscribe(b"T")	 #è®¢é˜…æ¸©åº¦ä¸»é¢˜
-    c.subscribe(b"H")	 #è®¢é˜…æ¹¿åº¦ä¸»é¢˜
-    c.subscribe(b"MC")	 #
+    c.subscribe(b"L") #¶©ÔÄled¿ØÖÆÖ÷Ìâ
+    c.subscribe(b"T")	 #¶©ÔÄÎÂ¶ÈÖ÷Ìâ
+    c.subscribe(b"H")	 #¶©ÔÄÊª¶ÈÖ÷Ìâ
+    c.subscribe(b"MC")	 #¶©ÔÄÊª¶ÈÖ÷Ìâ
     
     while flag_mqttconnctl:
         if True:
