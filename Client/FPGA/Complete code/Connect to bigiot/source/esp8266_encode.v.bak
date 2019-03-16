@@ -1,0 +1,76 @@
+module esp8266_encode(Clk,Rst_n,Sig,Data_send);
+input Clk,Rst_n;
+output Sig;
+output [7:0]Data_send;
+
+reg sig;
+reg [23:0]cnt;
+always@(posedge Clk or negedge Rst_n)begin
+		if(!Rst_n)begin
+				sig <= 1'b0;
+				cnt <= 15'd0;
+			end
+		else if(cnt == 24'd2500 -1)begin
+				sig <= 1'b1;
+				cnt <= cnt + 1'b1;
+			end
+		else if(cnt == 24'd5000 -1)begin
+				sig <= 1'b0;
+				cnt <= 24'd0;
+			end
+		else begin
+				cnt <= cnt + 1'b1;
+			end
+end	
+
+reg [7:0]state;
+reg [7:0]data_send;
+always@(posedge sig or negedge Rst_n)begin
+	if(!Rst_n)begin
+			state <= 0;
+			//datasend_esp8266<=0;
+		end
+	else begin
+			case(state)
+			0:begin data_send<=8'h41;state<=1;end
+			1:begin data_send<=8'h54;state<=2;end
+			2:begin data_send<=8'h2b;state<=3;end
+			3:begin data_send<=8'h43;state<=4;end
+			4:begin data_send<=8'h49;state<=5;end
+			5:begin data_send<=8'h50;state<=6;end
+			6:begin data_send<=8'h4d;state<=7;end
+			7:begin data_send<=8'h55;state<=8;end
+			8:begin data_send<=8'h58;state<=9;end
+			9:begin data_send<=8'h3d;state<=10;end
+			10:begin data_send<=8'h31;state<=11;end
+			11:begin data_send<=8'h0d;state<=12;end
+			12:begin data_send<=8'h0a;state<=13;end
+			
+			13:begin data_send<=8'h41;state<=14;end
+			14:begin data_send<=8'h54;state<=15;end
+			15:begin data_send<=8'h2b;state<=16;end
+			16:begin data_send<=8'h43;state<=17;end
+			17:begin data_send<=8'h49;state<=18;end
+			18:begin data_send<=8'h50;state<=19;end
+			19:begin data_send<=8'h53;state<=20;end
+			20:begin data_send<=8'h45;state<=21;end
+			21:begin data_send<=8'h52;state<=22;end
+			22:begin data_send<=8'h56;state<=23;end
+			23:begin data_send<=8'h45;state<=24;end
+			24:begin data_send<=8'h52;state<=25;end
+			25:begin data_send<=8'h3d;state<=26;end
+			26:begin data_send<=8'h31;state<=27;end
+			27:begin data_send<=8'h2c;state<=28;end
+			28:begin data_send<=8'h38;state<=29;end
+			29:begin data_send<=8'h30;state<=30;end
+			30:begin data_send<=8'h38;state<=31;end
+			31:begin data_send<=8'h30;state<=32;end
+			32:begin data_send<=8'h0d;state<=33;end
+			33:begin data_send<=8'h0a;state<=34;end
+			34:;
+			endcase
+		end                         
+end
+assign Sig=sig;
+assign Data_send[7:0]=data_send[7:0];
+endmodule

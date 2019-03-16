@@ -1,0 +1,28 @@
+module top(clk,rst_n,lcd_rs,lcd_en,lcd_rw,lcd_data);
+input clk,rst_n;
+output lcd_en,lcd_rs,lcd_rw;
+output [7:0]lcd_data;
+
+lcd1602 u1( .clk(clk),    //50M  20ns
+				.rst_n(rst_n),  
+				.lcd_rs(lcd_rs),//  1:write data  0:write commmand 
+				.lcd_en(lcd_en),//  1:使能
+				.lcd_rw(lcd_rw),//  1:read data   0:write data
+				.lcd_data(lcd_data),//数据口
+////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////传入要显示的字符////////////////////////////////
+//第一行
+				.data0("a"), .data1("b"), .data2("c"),
+				.data3("d"), .data4("e"), .data5("f"),
+				.data6("g"), .data7("h"), .data8("i"),
+				.data9("j"), .data10("k"),.data11("l"),
+				.data12("m"),.data13("n"),.data14("o"),.data15("p"),
+//第二行
+				.data16(8'h30+1),.data17(8'h30+2),.data18(8'h30+3),
+				.data19(8'h30+4),.data20(8'h30+5),.data21(8'h30+6),
+				.data22(8'h30+7),.data23(8'h30+8),.data24(8'h30+9),
+				.data25(8'h30+0),.data26("["),.data27("]"),
+				.data28("!"),.data29("@"),.data30("#"),.data31("$")
+);
+	
+endmodule

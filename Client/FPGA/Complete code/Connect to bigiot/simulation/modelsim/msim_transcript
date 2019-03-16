@@ -1,0 +1,95 @@
+# Reading D:/1/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do lcd1602_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\1\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\1\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_encode.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module esp8266_encode
+# 
+# Top level modules:
+# 	esp8266_encode
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_decode.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module esp8266_decode
+# 
+# Top level modules:
+# 	esp8266_decode
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/clk_set.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module clk_set
+# 
+# Top level modules:
+# 	clk_set
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pwm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pwm
+# 
+# Top level modules:
+# 	pwm
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pid_control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pid_control
+# 
+# Top level modules:
+# 	pid_control
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/lcd1602.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module lcd1602
+# 
+# Top level modules:
+# 	lcd1602
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/w_dale.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module w_dale
+# 
+# Top level modules:
+# 	w_dale
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_tx.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uart_tx
+# 
+# Top level modules:
+# 	uart_tx
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_rx.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uart_rx
+# 
+# Top level modules:
+# 	uart_rx
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/angle_dale.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module angle_dale
+# 
+# Top level modules:
+# 	angle_dale
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/ReceiveMessage_control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ReceiveMessage_control
+# 
+# Top level modules:
+# 	ReceiveMessage_control
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0 {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vlog-7) Failed to open design unit file "C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/tb.v" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: D:/1/altera/13.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./lcd1602_run_msim_rtl_verilog.do line 21
+# D:/1/altera/13.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0 {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/t..."

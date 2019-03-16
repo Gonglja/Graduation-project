@@ -1,0 +1,233 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_sys'
+Slack : -68.015
+TNS   : -326.876
+
+Type  : Slow 1200mV 85C Model Setup 'esp8266_encode:encode|sig'
+Slack : -31.445
+TNS   : -210.946
+
+Type  : Slow 1200mV 85C Model Setup 'dht11:DHT11|clkout'
+Slack : -5.448
+TNS   : -441.235
+
+Type  : Slow 1200mV 85C Model Setup 'clk_set:CLK_UART|clk'
+Slack : -4.040
+TNS   : -166.802
+
+Type  : Slow 1200mV 85C Model Setup 'DVF:dvf|clkout'
+Slack : -3.703
+TNS   : -420.497
+
+Type  : Slow 1200mV 85C Model Hold 'clk_set:CLK_UART|clk'
+Slack : -0.409
+TNS   : -0.679
+
+Type  : Slow 1200mV 85C Model Hold 'clk_sys'
+Slack : -0.195
+TNS   : -0.195
+
+Type  : Slow 1200mV 85C Model Hold 'dht11:DHT11|clkout'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'DVF:dvf|clkout'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'esp8266_encode:encode|sig'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'dht11:DHT11|clkout'
+Slack : -1.253
+TNS   : -52.900
+
+Type  : Slow 1200mV 85C Model Recovery 'esp8266_encode:encode|sig'
+Slack : -0.356
+TNS   : -3.946
+
+Type  : Slow 1200mV 85C Model Removal 'esp8266_encode:encode|sig'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'dht11:DHT11|clkout'
+Slack : 1.113
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_sys'
+Slack : -3.000
+TNS   : -118.986
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DVF:dvf|clkout'
+Slack : -1.487
+TNS   : -212.641
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dht11:DHT11|clkout'
+Slack : -1.487
+TNS   : -211.154
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_set:CLK_UART|clk'
+Slack : -1.487
+TNS   : -87.733
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'esp8266_encode:encode|sig'
+Slack : -1.487
+TNS   : -35.688
+
+Type  : Slow 1200mV 0C Model Setup 'clk_sys'
+Slack : -62.111
+TNS   : -291.683
+
+Type  : Slow 1200mV 0C Model Setup 'esp8266_encode:encode|sig'
+Slack : -28.551
+TNS   : -192.652
+
+Type  : Slow 1200mV 0C Model Setup 'dht11:DHT11|clkout'
+Slack : -5.052
+TNS   : -407.564
+
+Type  : Slow 1200mV 0C Model Setup 'clk_set:CLK_UART|clk'
+Slack : -3.751
+TNS   : -151.373
+
+Type  : Slow 1200mV 0C Model Setup 'DVF:dvf|clkout'
+Slack : -3.427
+TNS   : -395.663
+
+Type  : Slow 1200mV 0C Model Hold 'clk_set:CLK_UART|clk'
+Slack : -0.280
+TNS   : -0.365
+
+Type  : Slow 1200mV 0C Model Hold 'clk_sys'
+Slack : -0.166
+TNS   : -0.166
+
+Type  : Slow 1200mV 0C Model Hold 'dht11:DHT11|clkout'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'DVF:dvf|clkout'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'esp8266_encode:encode|sig'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'dht11:DHT11|clkout'
+Slack : -1.102
+TNS   : -45.492
+
+Type  : Slow 1200mV 0C Model Recovery 'esp8266_encode:encode|sig'
+Slack : -0.222
+TNS   : -1.770
+
+Type  : Slow 1200mV 0C Model Removal 'esp8266_encode:encode|sig'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'dht11:DHT11|clkout'
+Slack : 0.972
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_sys'
+Slack : -3.000
+TNS   : -118.986
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DVF:dvf|clkout'
+Slack : -1.487
+TNS   : -212.641
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dht11:DHT11|clkout'
+Slack : -1.487
+TNS   : -211.154
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_set:CLK_UART|clk'
+Slack : -1.487
+TNS   : -87.733
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'esp8266_encode:encode|sig'
+Slack : -1.487
+TNS   : -36.062
+
+Type  : Fast 1200mV 0C Model Setup 'clk_sys'
+Slack : -29.163
+TNS   : -98.636
+
+Type  : Fast 1200mV 0C Model Setup 'esp8266_encode:encode|sig'
+Slack : -12.729
+TNS   : -75.901
+
+Type  : Fast 1200mV 0C Model Setup 'dht11:DHT11|clkout'
+Slack : -1.676
+TNS   : -114.390
+
+Type  : Fast 1200mV 0C Model Setup 'DVF:dvf|clkout'
+Slack : -1.292
+TNS   : -135.223
+
+Type  : Fast 1200mV 0C Model Setup 'clk_set:CLK_UART|clk'
+Slack : -1.125
+TNS   : -38.373
+
+Type  : Fast 1200mV 0C Model Hold 'clk_set:CLK_UART|clk'
+Slack : -0.374
+TNS   : -0.900
+
+Type  : Fast 1200mV 0C Model Hold 'clk_sys'
+Slack : -0.197
+TNS   : -0.504
+
+Type  : Fast 1200mV 0C Model Hold 'DVF:dvf|clkout'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'dht11:DHT11|clkout'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'esp8266_encode:encode|sig'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'dht11:DHT11|clkout'
+Slack : -0.036
+TNS   : -0.156
+
+Type  : Fast 1200mV 0C Model Recovery 'esp8266_encode:encode|sig'
+Slack : 0.318
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'esp8266_encode:encode|sig'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'dht11:DHT11|clkout'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_sys'
+Slack : -3.000
+TNS   : -86.072
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DVF:dvf|clkout'
+Slack : -1.000
+TNS   : -143.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dht11:DHT11|clkout'
+Slack : -1.000
+TNS   : -142.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_set:CLK_UART|clk'
+Slack : -1.000
+TNS   : -59.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'esp8266_encode:encode|sig'
+Slack : -1.000
+TNS   : -24.000
+
+------------------------------------------------------------
