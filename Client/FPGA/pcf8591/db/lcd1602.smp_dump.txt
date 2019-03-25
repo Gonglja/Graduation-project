@@ -1,0 +1,7 @@
+
+State Machine - |top|ad:pcf8591|ack
+Name ack.11 ack.10 ack.01 ack.00 
+ack.00 0 0 0 0 
+ack.01 0 0 1 1 
+ack.10 0 1 0 1 
+ack.11 1 0 0 1 
