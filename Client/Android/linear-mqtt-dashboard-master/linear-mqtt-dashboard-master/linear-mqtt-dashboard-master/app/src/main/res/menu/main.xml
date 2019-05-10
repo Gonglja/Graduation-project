@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MainActivity">
+
+    <item
+        android:id="@+id/auto_create_widgets"
+        android:icon="@drawable/auto_create_widgets"
+        android:title="Auto-create widgets"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/Add_new_widget"
+        android:icon="@drawable/ic_plus"
+        android:title="Add new widget"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/Edit_play_mode"
+        android:checkable="true"
+        android:icon="@drawable/ic_pause"
+        android:title="PLAY/EDIT"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/Clean_dashboard"
+        android:title="Clean dashboard"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/connection_settings"
+        android:icon="@drawable/ic_connect"
+        android:title="App settings..."
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/tabs"
+        android:icon="@drawable/ic_connect"
+        android:title="Tabs..."
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/import_settings"
+        android:title="Import settings..."
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/request_prices"
+        android:title="Request prices"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/share_settings"
+        android:title="Share settings..."
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_lists"
+        android:title="action_lists"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_board"
+        android:title="action_board"
+        android:visible="false"
+        app:showAsAction="never" />
+
+</menu>
