@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>系统监控图</title>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/socket.io/1.5.1/socket.io.min.js"></script>
+    <!-- ECharts 3 引入 图形库-->
+    <script src="http://echarts.baidu.com/dist/echarts.min.js"></script>
+</head>
+
+
+
+<body>
+    <div id="main" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
+
+    <script type="text/javascript">
+    
+    var myChart = echarts.init(document.getElementById('main'));
+
+    myChart.setOption({
+        title: {
+            text: 'XX机房环境监控系统'
+        },
+        tooltip: {},
+        legend: {
+            data:['温度','湿度','烟雾浓度'] //折线图上方显示标志
+        },
+        color:['#ffa414','#30903f','#8470ff'],  //设置legend颜色
+        xAxis: {
+            data: []
+        },
+        yAxis: {},
+        series: [{
+            name: '温度',
+            type: 'line',
+            data: [],
+            lineStyle:{  //设置折线颜色
+                            normal:{
+                                color:'#ffa414',
+                                width:3
+                            }
+                       }
+        },{
+            name: '湿度',
+            type: 'line',
+            data: [],
+            lineStyle:{
+                           normal:{
+                               color:'#30903f',
+                               width:3
+                           }
+                       }
+        },{
+            name: '烟雾浓度',
+            type: 'line',
+            data: [],
+            lineStyle:{
+                           normal:{
+                               color:'#8470ff',
+                               width:3
+                           }
+                       }
+        }]
+    });
+
+
+    var time = ["","","","","","","","","",""],
+        temp = [0,0,0,0,0,0,0,0,0,0],
+        hum  = [0,0,0,0,0,0,0,0,0,0],
+        sm   = [0,0,0,0,0,0,0,0,0,0]
+
+
+    //准备好统一的 callback 函数
+    var update_mychart = function (res) {
+    //res是json格式的response对象
+
+        // 隐藏加载动画
+        myChart.hideLoading();
+
+        // 准备数据 对应socketio.emit 0-->时间  1-->温度 2-->湿度
+        time.push(res.data[0]);
+        temp.push(parseFloat(res.data[1]))
+        hum.push(parseFloat(res.data[2]));
+        sm.push(parseFloat(res.data[3]));
+        if (time.length >= 10){
+            time.shift();
+            temp.shift();
+            hum.shift();
+            sm.shift();
+        }
+
+        // 填入数据
+        myChart.setOption({
+            xAxis: {
+                data: time
+            },
+            series: [{
+                name: '温度', // 根据名字对应到相应的系列
+                data: temp
+            },{
+                name: '湿度', // 根据名字对应到相应的系列
+                data: hum
+            },{
+                name: '烟雾浓度', // 根据名字对应到相应的系列
+                data: sm
+            }]
+        });
+
+    };
+
+    // 首次显示加载动画
+    myChart.showLoading();
+
+
+    // 建立socket连接，等待服务器“推送”数据，用回调函数更新图表
+    $(document).ready(function() {
+        namespace = '/Monitor';
+        var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);
+        socket.on('server_response', function(res) {
+            //res表示接收的数据，这里做数据的处理
+            update_mychart(res);
+        });
+    });
+
+    
+    function button_on()
+    {
+        var socket1 = io.connect(location.protocol + '//' + document.domain + ':' + location.port+'/Control');
+        socket1.on('connect', function() {socket1.emit('button', '1');});
+    }
+    function button_off()
+    {
+        var socket1 = io.connect(location.protocol + '//' + document.domain + ':' + location.port+'/Control');
+        socket1.on('connect', function() {socket1.emit('button', '0');});
+    }
+    </script>  
+
+    <h3>  控制部分 蜂鸣器</h3>
+    <button onclick="button_on()">打开</button>
+    <button onclick="button_off()">关闭</button>
+</body>
+</html>

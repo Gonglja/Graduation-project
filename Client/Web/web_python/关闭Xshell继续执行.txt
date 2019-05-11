@@ -1,0 +1,3 @@
+执行   sudo nohup python3 main.py
+关闭   ps -ef 找到相应的进程号
+          kill -9 进程号
