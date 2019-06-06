@@ -1,5 +1,5 @@
-Analysis & Synthesis report for lcd1602
-Tue Dec 04 12:29:55 2018
+Analysis & Elaboration report for lcd1602
+Fri Mar 22 16:24:28 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -7,30 +7,16 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: Top-level Entity: |top
- 14. Parameter Settings for User Entity Instance: lcd1602:U5
- 15. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 16. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 17. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 18. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
- 19. Parameter Settings for Inferred Entity Instance: ReceiveMessage_control:UU|lpm_mult:Mult0
- 20. lpm_mult Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "lcd1602:U5"
- 22. Port Connectivity Checks: "clk_set:CLK_UART"
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |top
+  5. Parameter Settings for User Entity Instance: lcd1602:U5
+  6. Analysis & Elaboration Settings
+  7. Port Connectivity Checks: "lcd1602:U5"
+  8. Port Connectivity Checks: "ReceiveMessage_control:UU"
+  9. Port Connectivity Checks: "clk_set:CLK_UART"
+ 10. Analysis & Elaboration Messages
+ 11. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -54,27 +40,68 @@ applicable agreement for further details.
 
 
 +---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
+; Analysis & Elaboration Summary                                                  ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 04 12:29:55 2018      ;
+; Analysis & Elaboration Status      ; Successful - Fri Mar 22 16:24:28 2019      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; lcd1602                                    ;
 ; Top-level Entity Name              ; top                                        ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 1,521                                      ;
-;     Total combinational functions  ; 1,486                                      ;
-;     Dedicated logic registers      ; 595                                        ;
-; Total registers                    ; 595                                        ;
-; Total pins                         ; 17                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
 +------------------------------------+--------------------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top ;
++----------------+------------------+---------------------------------+
+; Parameter Name ; Value            ; Type                            ;
++----------------+------------------+---------------------------------+
+; BPS_9600       ; 0000000101000101 ; Unsigned Binary                 ;
+; BPS_115200     ; 0000000000011011 ; Unsigned Binary                 ;
++----------------+------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd1602:U5 ;
++----------------+----------+-----------------------------+
+; Parameter Name ; Value    ; Type                        ;
++----------------+----------+-----------------------------+
+; Mode_Set       ; 00111000 ; Unsigned Binary             ;
+; Cursor_Set     ; 00001100 ; Unsigned Binary             ;
+; Address_Set    ; 00000110 ; Unsigned Binary             ;
+; Clear_Set      ; 00000001 ; Unsigned Binary             ;
++----------------+----------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
+; Analysis & Elaboration Settings                                                                                      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -161,670 +188,136 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ; < 0.1%      ;
-+----------------------------+-------------+
++------------------------------------------------+
+; Port Connectivity Checks: "lcd1602:U5"         ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; data0[1..0]  ; Input ; Info     ; Stuck at VCC ;
+; data0[5..2]  ; Input ; Info     ; Stuck at GND ;
+; data0[7]     ; Input ; Info     ; Stuck at GND ;
+; data0[6]     ; Input ; Info     ; Stuck at VCC ;
+; data1[5..1]  ; Input ; Info     ; Stuck at GND ;
+; data1[7]     ; Input ; Info     ; Stuck at GND ;
+; data1[6]     ; Input ; Info     ; Stuck at VCC ;
+; data1[0]     ; Input ; Info     ; Stuck at VCC ;
+; data2[5..3]  ; Input ; Info     ; Stuck at VCC ;
+; data2[7..6]  ; Input ; Info     ; Stuck at GND ;
+; data2[2]     ; Input ; Info     ; Stuck at GND ;
+; data2[1]     ; Input ; Info     ; Stuck at VCC ;
+; data2[0]     ; Input ; Info     ; Stuck at GND ;
+; data3[7..6]  ; Input ; Info     ; Stuck at GND ;
+; data3[4..0]  ; Input ; Info     ; Stuck at GND ;
+; data3[5]     ; Input ; Info     ; Stuck at VCC ;
+; data4[7..6]  ; Input ; Info     ; Stuck at GND ;
+; data4[4..0]  ; Input ; Info     ; Stuck at GND ;
+; data4[5]     ; Input ; Info     ; Stuck at VCC ;
+; data5[7..6]  ; Input ; Info     ; Stuck at GND ;
+; data5[4..0]  ; Input ; Info     ; Stuck at GND ;
+; data5[5]     ; Input ; Info     ; Stuck at VCC ;
+; data6[7..6]  ; Input ; Info     ; Stuck at GND ;
+; data6[4..0]  ; Input ; Info     ; Stuck at GND ;
+; data6[5]     ; Input ; Info     ; Stuck at VCC ;
+; data7[1..0]  ; Input ; Info     ; Stuck at VCC ;
+; data7[3..2]  ; Input ; Info     ; Stuck at GND ;
+; data7[7]     ; Input ; Info     ; Stuck at GND ;
+; data7[6]     ; Input ; Info     ; Stuck at VCC ;
+; data7[5]     ; Input ; Info     ; Stuck at GND ;
+; data7[4]     ; Input ; Info     ; Stuck at VCC ;
+; data8[5..1]  ; Input ; Info     ; Stuck at GND ;
+; data8[7]     ; Input ; Info     ; Stuck at GND ;
+; data8[6]     ; Input ; Info     ; Stuck at VCC ;
+; data8[0]     ; Input ; Info     ; Stuck at VCC ;
+; data9[5..3]  ; Input ; Info     ; Stuck at VCC ;
+; data9[7..6]  ; Input ; Info     ; Stuck at GND ;
+; data9[2]     ; Input ; Info     ; Stuck at GND ;
+; data9[1]     ; Input ; Info     ; Stuck at VCC ;
+; data9[0]     ; Input ; Info     ; Stuck at GND ;
+; data10[7..6] ; Input ; Info     ; Stuck at GND ;
+; data10[4..0] ; Input ; Info     ; Stuck at GND ;
+; data10[5]    ; Input ; Info     ; Stuck at VCC ;
+; data11[7..6] ; Input ; Info     ; Stuck at GND ;
+; data11[4..0] ; Input ; Info     ; Stuck at GND ;
+; data11[5]    ; Input ; Info     ; Stuck at VCC ;
+; data12[7..6] ; Input ; Info     ; Stuck at GND ;
+; data12[4..0] ; Input ; Info     ; Stuck at GND ;
+; data12[5]    ; Input ; Info     ; Stuck at VCC ;
+; data13[7..6] ; Input ; Info     ; Stuck at GND ;
+; data13[4..0] ; Input ; Info     ; Stuck at GND ;
+; data13[5]    ; Input ; Info     ; Stuck at VCC ;
+; data14[7..6] ; Input ; Info     ; Stuck at GND ;
+; data14[4..0] ; Input ; Info     ; Stuck at GND ;
+; data14[5]    ; Input ; Info     ; Stuck at VCC ;
+; data15[7..6] ; Input ; Info     ; Stuck at GND ;
+; data15[4..0] ; Input ; Info     ; Stuck at GND ;
+; data15[5]    ; Input ; Info     ; Stuck at VCC ;
+; data16[3..2] ; Input ; Info     ; Stuck at GND ;
+; data16[7]    ; Input ; Info     ; Stuck at GND ;
+; data16[6]    ; Input ; Info     ; Stuck at VCC ;
+; data16[5]    ; Input ; Info     ; Stuck at GND ;
+; data16[4]    ; Input ; Info     ; Stuck at VCC ;
+; data16[1]    ; Input ; Info     ; Stuck at VCC ;
+; data16[0]    ; Input ; Info     ; Stuck at GND ;
+; data17[5..3] ; Input ; Info     ; Stuck at VCC ;
+; data17[7..6] ; Input ; Info     ; Stuck at GND ;
+; data17[2]    ; Input ; Info     ; Stuck at GND ;
+; data17[1]    ; Input ; Info     ; Stuck at VCC ;
+; data17[0]    ; Input ; Info     ; Stuck at GND ;
+; data18[7..6] ; Input ; Info     ; Stuck at GND ;
+; data18[4..0] ; Input ; Info     ; Stuck at GND ;
+; data18[5]    ; Input ; Info     ; Stuck at VCC ;
+; data19[7..6] ; Input ; Info     ; Stuck at GND ;
+; data19[4..0] ; Input ; Info     ; Stuck at GND ;
+; data19[5]    ; Input ; Info     ; Stuck at VCC ;
+; data20[7..6] ; Input ; Info     ; Stuck at GND ;
+; data20[4..0] ; Input ; Info     ; Stuck at GND ;
+; data20[5]    ; Input ; Info     ; Stuck at VCC ;
+; data21[7..6] ; Input ; Info     ; Stuck at GND ;
+; data21[4..0] ; Input ; Info     ; Stuck at GND ;
+; data21[5]    ; Input ; Info     ; Stuck at VCC ;
+; data22[5..1] ; Input ; Info     ; Stuck at GND ;
+; data22[7]    ; Input ; Info     ; Stuck at GND ;
+; data22[6]    ; Input ; Info     ; Stuck at VCC ;
+; data22[0]    ; Input ; Info     ; Stuck at VCC ;
+; data23[5..3] ; Input ; Info     ; Stuck at VCC ;
+; data23[7..6] ; Input ; Info     ; Stuck at GND ;
+; data23[2]    ; Input ; Info     ; Stuck at GND ;
+; data23[1]    ; Input ; Info     ; Stuck at VCC ;
+; data23[0]    ; Input ; Info     ; Stuck at GND ;
+; data24[7..6] ; Input ; Info     ; Stuck at GND ;
+; data24[4..0] ; Input ; Info     ; Stuck at GND ;
+; data24[5]    ; Input ; Info     ; Stuck at VCC ;
+; data25[7..6] ; Input ; Info     ; Stuck at GND ;
+; data25[4..0] ; Input ; Info     ; Stuck at GND ;
+; data25[5]    ; Input ; Info     ; Stuck at VCC ;
+; data26[7..6] ; Input ; Info     ; Stuck at GND ;
+; data26[4..0] ; Input ; Info     ; Stuck at GND ;
+; data26[5]    ; Input ; Info     ; Stuck at VCC ;
+; data27[7..6] ; Input ; Info     ; Stuck at GND ;
+; data27[4..0] ; Input ; Info     ; Stuck at GND ;
+; data27[5]    ; Input ; Info     ; Stuck at VCC ;
+; data28[7..6] ; Input ; Info     ; Stuck at GND ;
+; data28[4..0] ; Input ; Info     ; Stuck at GND ;
+; data28[5]    ; Input ; Info     ; Stuck at VCC ;
+; data29[7..6] ; Input ; Info     ; Stuck at GND ;
+; data29[4..0] ; Input ; Info     ; Stuck at GND ;
+; data29[5]    ; Input ; Info     ; Stuck at VCC ;
+; data30[7..6] ; Input ; Info     ; Stuck at GND ;
+; data30[4..0] ; Input ; Info     ; Stuck at GND ;
+; data30[5]    ; Input ; Info     ; Stuck at VCC ;
+; data31[7..6] ; Input ; Info     ; Stuck at GND ;
+; data31[4..0] ; Input ; Info     ; Stuck at GND ;
+; data31[5]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; source/esp8266_encode.v          ; yes             ; User Verilog HDL File        ; C:/Users/wslibeia/Desktop/bishe/source/esp8266_encode.v                  ;         ;
-; source/esp8266_decode.v          ; yes             ; User Verilog HDL File        ; C:/Users/wslibeia/Desktop/bishe/source/esp8266_decode.v                  ;         ;
-; source/clk_set.v                 ; yes             ; User Verilog HDL File        ; C:/Users/wslibeia/Desktop/bishe/source/clk_set.v                         ;         ;
-; source/lcd1602.v                 ; yes             ; User Verilog HDL File        ; C:/Users/wslibeia/Desktop/bishe/source/lcd1602.v                         ;         ;
-; source/uart_tx.v                 ; yes             ; User Verilog HDL File        ; C:/Users/wslibeia/Desktop/bishe/source/uart_tx.v                         ;         ;
-; source/uart_rx.v                 ; yes             ; User Verilog HDL File        ; C:/Users/wslibeia/Desktop/bishe/source/uart_rx.v                         ;         ;
-; source/top.v                     ; yes             ; User Verilog HDL File        ; C:/Users/wslibeia/Desktop/bishe/source/top.v                             ;         ;
-; source/ReceiveMessage_control.v  ; yes             ; User Verilog HDL File        ; C:/Users/wslibeia/Desktop/bishe/source/ReceiveMessage_control.v          ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
-; db/lpm_divide_2bm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/lpm_divide_2bm.tdf                    ;         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/sign_div_unsign_nlh.tdf               ;         ;
-; db/alt_u_div_27f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/alt_u_div_27f.tdf                     ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/add_sub_7pc.tdf                       ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/add_sub_8pc.tdf                       ;         ;
-; db/lpm_divide_2jm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/lpm_divide_2jm.tdf                    ;         ;
-; db/sign_div_unsign_rlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/sign_div_unsign_rlh.tdf               ;         ;
-; db/alt_u_div_97f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/alt_u_div_97f.tdf                     ;         ;
-; db/lpm_divide_6bm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/lpm_divide_6bm.tdf                    ;         ;
-; db/lpm_divide_ihm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/lpm_divide_ihm.tdf                    ;         ;
-; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/sign_div_unsign_akh.tdf               ;         ;
-; db/alt_u_div_84f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/alt_u_div_84f.tdf                     ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/multcore.inc            ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; multcore.tdf                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/multcore.tdf            ;         ;
-; csa_add.inc                      ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/csa_add.inc             ;         ;
-; mpar_add.inc                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
-; muleabz.inc                      ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/muleabz.inc             ;         ;
-; mul_lfrg.inc                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
-; mul_boothc.inc                   ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
-; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
-; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
-; dffpipe.inc                      ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
-; mpar_add.tdf                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
-; addcore.inc                      ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/addcore.inc             ;         ;
-; look_add.inc                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/look_add.inc            ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_kgh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/add_sub_kgh.tdf                       ;         ;
-; db/add_sub_ogh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/wslibeia/Desktop/bishe/db/add_sub_ogh.tdf                       ;         ;
-; altshift.tdf                     ; yes             ; Megafunction                 ; d:/1/altera/13.0/quartus/libraries/megafunctions/altshift.tdf            ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 1,521       ;
-;                                             ;             ;
-; Total combinational functions               ; 1486        ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 537         ;
-;     -- 3 input functions                    ; 481         ;
-;     -- <=2 input functions                  ; 468         ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 1214        ;
-;     -- arithmetic mode                      ; 272         ;
-;                                             ;             ;
-; Total registers                             ; 595         ;
-;     -- Dedicated logic registers            ; 595         ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 17          ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-; Maximum fan-out node                        ; rst_n~input ;
-; Maximum fan-out                             ; 570         ;
-; Total fan-out                               ; 6597        ;
-; Average fan-out                             ; 3.12        ;
-+---------------------------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                  ;
-+---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                   ; Library Name ;
-+---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                              ; 1486 (3)          ; 595 (0)      ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |top                                                                                                                                                  ;              ;
-;    |ReceiveMessage_control:UU|                    ; 64 (42)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ReceiveMessage_control:UU                                                                                                                        ;              ;
-;       |lpm_mult:Mult0|                            ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ReceiveMessage_control:UU|lpm_mult:Mult0                                                                                                         ;              ;
-;          |multcore:mult_core|                     ; 22 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core                                                                                      ;              ;
-;             |mpar_add:padder|                     ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ;              ;
-;                |lpm_add_sub:adder[0]|             ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
-;                   |add_sub_kgh:auto_generated|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_kgh:auto_generated                      ;              ;
-;                |mpar_add:sub_par_add|             ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ;              ;
-;                   |lpm_add_sub:adder[0]|          ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
-;                      |add_sub_ogh:auto_generated| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ogh:auto_generated ;              ;
-;    |clk_set:CLK_UART|                             ; 27 (27)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_set:CLK_UART                                                                                                                                 ;              ;
-;    |esp8266_decode:decode|                        ; 11 (11)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|esp8266_decode:decode                                                                                                                            ;              ;
-;    |esp8266_encode:encode|                        ; 694 (694)         ; 444 (444)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|esp8266_encode:encode                                                                                                                            ;              ;
-;    |lcd1602:U5|                                   ; 145 (145)         ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lcd1602:U5                                                                                                                                       ;              ;
-;    |lpm_divide:Div0|                              ; 138 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0                                                                                                                                  ;              ;
-;       |lpm_divide_2jm:auto_generated|             ; 138 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_2jm:auto_generated                                                                                                    ;              ;
-;          |sign_div_unsign_rlh:divider|            ; 138 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_rlh:divider                                                                        ;              ;
-;             |alt_u_div_97f:divider|               ; 138 (138)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_97f:divider                                                  ;              ;
-;    |lpm_divide:Div1|                              ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1                                                                                                                                  ;              ;
-;       |lpm_divide_ihm:auto_generated|             ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_ihm:auto_generated                                                                                                    ;              ;
-;          |sign_div_unsign_akh:divider|            ; 43 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider                                                                        ;              ;
-;             |alt_u_div_84f:divider|               ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div1|lpm_divide_ihm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_84f:divider                                                  ;              ;
-;    |lpm_divide:Mod0|                              ; 135 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod0                                                                                                                                  ;              ;
-;       |lpm_divide_6bm:auto_generated|             ; 135 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod0|lpm_divide_6bm:auto_generated                                                                                                    ;              ;
-;          |sign_div_unsign_rlh:divider|            ; 135 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod0|lpm_divide_6bm:auto_generated|sign_div_unsign_rlh:divider                                                                        ;              ;
-;             |alt_u_div_97f:divider|               ; 135 (135)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod0|lpm_divide_6bm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_97f:divider                                                  ;              ;
-;    |lpm_divide:Mod1|                              ; 128 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod1                                                                                                                                  ;              ;
-;       |lpm_divide_2bm:auto_generated|             ; 128 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod1|lpm_divide_2bm:auto_generated                                                                                                    ;              ;
-;          |sign_div_unsign_nlh:divider|            ; 128 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod1|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider                                                                        ;              ;
-;             |alt_u_div_27f:divider|               ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Mod1|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider                                                  ;              ;
-;    |uart_rx:module_rx_esp8266|                    ; 51 (51)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_rx:module_rx_esp8266                                                                                                                        ;              ;
-;    |uart_tx:module_tx_esp8266|                    ; 47 (47)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|uart_tx:module_tx_esp8266                                                                                                                        ;              ;
-+---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                       ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+
-; Register name                                                                                                                                               ; Reason for Removal                         ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+
-; lcd1602:U5|state1[7..11]                                                                                                                                    ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[1,3,5..8]                                                                                                                        ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[1,3,5..8]                                                                                                                        ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[24]                                                                                                                              ; Merged with esp8266_encode:encode|str1[23] ;
-; esp8266_encode:encode|str1[14..16]                                                                                                                          ; Merged with esp8266_encode:encode|str1[13] ;
-; esp8266_encode:encode|str1[9]                                                                                                                               ; Merged with esp8266_encode:encode|str1[11] ;
-; esp8266_encode:encode|str1[4]                                                                                                                               ; Merged with esp8266_encode:encode|str1[2]  ;
-; esp8266_encode:encode|str2[22]                                                                                                                              ; Merged with esp8266_encode:encode|str2[21] ;
-; esp8266_encode:encode|str2[14..16]                                                                                                                          ; Merged with esp8266_encode:encode|str2[13] ;
-; esp8266_encode:encode|str2[9]                                                                                                                               ; Merged with esp8266_encode:encode|str2[11] ;
-; esp8266_encode:encode|str2[4]                                                                                                                               ; Merged with esp8266_encode:encode|str2[2]  ;
-; esp8266_encode:encode|str1[13]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[13]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[23]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[24]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[32]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[32]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[40]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[40]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[48]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[48]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[56]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[56]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[64]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[64]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[72]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[72]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[80]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[80]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[88]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[88]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[96]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[96]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[104]                                                                                                                             ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[104]                                                                                                                             ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[112]                                                                                                                             ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str2[112]                                                                                                                             ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[120,128,136,144,152,160,168,176,184,192,200,208,216,224,232,240,248,256,264,272,280,288,296,304,312,320,328,336,344,352,360,368] ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|data_send[7]                                                                                                                          ; Stuck at GND due to stuck port data_in     ;
-; esp8266_encode:encode|str1[11]                                                                                                                              ; Merged with esp8266_encode:encode|str1[22] ;
-; esp8266_encode:encode|str2[2]                                                                                                                               ; Merged with esp8266_encode:encode|str2[11] ;
-; esp8266_decode:decode|count[3]                                                                                                                              ; Stuck at GND due to stuck port data_in     ;
-; Total Number of Removed Registers = 91                                                                                                                      ;                                            ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                     ;
-+-------------------------------+---------------------------+---------------------------------------------------------------------+
-; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                              ;
-+-------------------------------+---------------------------+---------------------------------------------------------------------+
-; esp8266_encode:encode|str1[5] ; Stuck at GND              ; esp8266_encode:encode|str1[13], esp8266_encode:encode|str1[23],     ;
-;                               ; due to stuck port data_in ; esp8266_encode:encode|str1[32], esp8266_encode:encode|str1[40],     ;
-;                               ;                           ; esp8266_encode:encode|str1[48], esp8266_encode:encode|str1[56],     ;
-;                               ;                           ; esp8266_encode:encode|str1[64], esp8266_encode:encode|str1[72],     ;
-;                               ;                           ; esp8266_encode:encode|str1[80], esp8266_encode:encode|str1[88],     ;
-;                               ;                           ; esp8266_encode:encode|str1[96], esp8266_encode:encode|str1[104],    ;
-;                               ;                           ; esp8266_encode:encode|str1[112], esp8266_encode:encode|str1[120],   ;
-;                               ;                           ; esp8266_encode:encode|str1[128], esp8266_encode:encode|str1[136],   ;
-;                               ;                           ; esp8266_encode:encode|str1[144], esp8266_encode:encode|str1[152],   ;
-;                               ;                           ; esp8266_encode:encode|str1[160], esp8266_encode:encode|str1[168],   ;
-;                               ;                           ; esp8266_encode:encode|str1[176], esp8266_encode:encode|str1[184],   ;
-;                               ;                           ; esp8266_encode:encode|str1[192], esp8266_encode:encode|str1[200],   ;
-;                               ;                           ; esp8266_encode:encode|str1[208], esp8266_encode:encode|str1[216],   ;
-;                               ;                           ; esp8266_encode:encode|str1[224], esp8266_encode:encode|str1[232],   ;
-;                               ;                           ; esp8266_encode:encode|str1[240], esp8266_encode:encode|str1[248],   ;
-;                               ;                           ; esp8266_encode:encode|str1[256], esp8266_encode:encode|str1[264],   ;
-;                               ;                           ; esp8266_encode:encode|str1[272], esp8266_encode:encode|str1[280],   ;
-;                               ;                           ; esp8266_encode:encode|str1[288], esp8266_encode:encode|str1[296],   ;
-;                               ;                           ; esp8266_encode:encode|str1[304], esp8266_encode:encode|str1[312],   ;
-;                               ;                           ; esp8266_encode:encode|str1[320], esp8266_encode:encode|str1[328],   ;
-;                               ;                           ; esp8266_encode:encode|str1[336], esp8266_encode:encode|str1[344],   ;
-;                               ;                           ; esp8266_encode:encode|str1[352], esp8266_encode:encode|str1[360],   ;
-;                               ;                           ; esp8266_encode:encode|str1[368]                                     ;
-; esp8266_encode:encode|str2[5] ; Stuck at GND              ; esp8266_encode:encode|str2[13], esp8266_encode:encode|str2[24],     ;
-;                               ; due to stuck port data_in ; esp8266_encode:encode|str2[32], esp8266_encode:encode|str2[40],     ;
-;                               ;                           ; esp8266_encode:encode|str2[48], esp8266_encode:encode|str2[56],     ;
-;                               ;                           ; esp8266_encode:encode|str2[64], esp8266_encode:encode|str2[72],     ;
-;                               ;                           ; esp8266_encode:encode|str2[80], esp8266_encode:encode|str2[88],     ;
-;                               ;                           ; esp8266_encode:encode|str2[96], esp8266_encode:encode|str2[104],    ;
-;                               ;                           ; esp8266_encode:encode|str2[112], esp8266_encode:encode|data_send[7] ;
-+-------------------------------+---------------------------+---------------------------------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 595   ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 5     ;
-; Number of registers using Asynchronous Clear ; 567   ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 348   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Inverted Register Statistics                        ;
-+-------------------------------------------+---------+
-; Inverted Register                         ; Fan out ;
-+-------------------------------------------+---------+
-; ReceiveMessage_control:UU|setAngle[6]     ; 9       ;
-; ReceiveMessage_control:UU|setAngle[4]     ; 9       ;
-; ReceiveMessage_control:UU|setAngle[3]     ; 9       ;
-; ReceiveMessage_control:UU|setAngle[1]     ; 5       ;
-; esp8266_decode:decode|w[5]                ; 5       ;
-; esp8266_encode:encode|state[2]            ; 58      ;
-; esp8266_encode:encode|state[6]            ; 37      ;
-; esp8266_encode:encode|state[1]            ; 44      ;
-; esp8266_encode:encode|str2[111]           ; 1       ;
-; esp8266_encode:encode|str1[367]           ; 1       ;
-; esp8266_encode:encode|str2[105]           ; 1       ;
-; esp8266_encode:encode|str1[361]           ; 1       ;
-; esp8266_encode:encode|str1[357]           ; 2       ;
-; esp8266_encode:encode|str2[101]           ; 2       ;
-; esp8266_encode:encode|str2[103]           ; 2       ;
-; esp8266_encode:encode|str1[359]           ; 2       ;
-; esp8266_encode:encode|str1[355]           ; 2       ;
-; esp8266_encode:encode|str2[99]            ; 2       ;
-; esp8266_encode:encode|str1[350]           ; 2       ;
-; esp8266_encode:encode|str2[94]            ; 2       ;
-; esp8266_encode:encode|str1[348]           ; 1       ;
-; esp8266_encode:encode|str2[92]            ; 1       ;
-; esp8266_encode:encode|str2[89]            ; 1       ;
-; esp8266_encode:encode|str1[345]           ; 1       ;
-; esp8266_encode:encode|str1[346]           ; 2       ;
-; esp8266_encode:encode|str2[90]            ; 2       ;
-; esp8266_encode:encode|str2[87]            ; 1       ;
-; esp8266_encode:encode|str1[343]           ; 2       ;
-; esp8266_encode:encode|str2[81]            ; 2       ;
-; esp8266_encode:encode|str1[337]           ; 2       ;
-; esp8266_encode:encode|str1[338]           ; 1       ;
-; esp8266_encode:encode|str2[82]            ; 1       ;
-; esp8266_encode:encode|str1[333]           ; 1       ;
-; esp8266_encode:encode|str2[76]            ; 1       ;
-; esp8266_encode:encode|str2[79]            ; 2       ;
-; esp8266_encode:encode|str1[335]           ; 2       ;
-; esp8266_encode:encode|str2[73]            ; 1       ;
-; esp8266_encode:encode|str1[329]           ; 2       ;
-; esp8266_encode:encode|str1[330]           ; 1       ;
-; esp8266_encode:encode|str1[331]           ; 2       ;
-; esp8266_encode:encode|str2[69]            ; 2       ;
-; esp8266_encode:encode|str1[324]           ; 2       ;
-; esp8266_encode:encode|str2[71]            ; 1       ;
-; esp8266_encode:encode|str1[327]           ; 1       ;
-; esp8266_encode:encode|str1[322]           ; 1       ;
-; esp8266_encode:encode|str2[60]            ; 1       ;
-; esp8266_encode:encode|str2[63]            ; 1       ;
-; esp8266_encode:encode|str1[319]           ; 1       ;
-; esp8266_encode:encode|str2[57]            ; 1       ;
-; esp8266_encode:encode|str1[313]           ; 1       ;
-; esp8266_encode:encode|str2[59]            ; 2       ;
-; esp8266_encode:encode|str1[309]           ; 2       ;
-; esp8266_encode:encode|str2[52]            ; 2       ;
-; esp8266_encode:encode|str2[55]            ; 1       ;
-; esp8266_encode:encode|str1[311]           ; 1       ;
-; esp8266_encode:encode|str2[49]            ; 1       ;
-; esp8266_encode:encode|str2[50]            ; 2       ;
-; esp8266_encode:encode|str2[51]            ; 1       ;
-; esp8266_encode:encode|str1[301]           ; 2       ;
-; esp8266_encode:encode|str1[302]           ; 1       ;
-; esp8266_encode:encode|str1[300]           ; 2       ;
-; esp8266_encode:encode|str2[47]            ; 1       ;
-; esp8266_encode:encode|str1[297]           ; 1       ;
-; esp8266_encode:encode|str1[299]           ; 1       ;
-; esp8266_encode:encode|str2[43]            ; 2       ;
-; esp8266_encode:encode|str1[294]           ; 1       ;
-; esp8266_encode:encode|str2[39]            ; 1       ;
-; esp8266_encode:encode|str2[33]            ; 1       ;
-; esp8266_encode:encode|str1[290]           ; 1       ;
-; esp8266_encode:encode|str2[35]            ; 1       ;
-; esp8266_encode:encode|str1[285]           ; 1       ;
-; esp8266_encode:encode|str2[29]            ; 2       ;
-; esp8266_encode:encode|str2[30]            ; 1       ;
-; esp8266_encode:encode|str2[28]            ; 1       ;
-; esp8266_encode:encode|str1[287]           ; 1       ;
-; esp8266_encode:encode|str2[25]            ; 2       ;
-; esp8266_encode:encode|str2[27]            ; 1       ;
-; esp8266_encode:encode|str2[21]            ; 3       ;
-; esp8266_encode:encode|str1[278]           ; 1       ;
-; esp8266_encode:encode|str1[276]           ; 1       ;
-; esp8266_encode:encode|str1[279]           ; 1       ;
-; esp8266_encode:encode|str2[17]            ; 1       ;
-; esp8266_encode:encode|str1[273]           ; 1       ;
-; esp8266_encode:encode|str1[274]           ; 1       ;
-; esp8266_encode:encode|str1[275]           ; 2       ;
-; esp8266_encode:encode|str1[269]           ; 1       ;
-; esp8266_encode:encode|str1[270]           ; 1       ;
-; esp8266_encode:encode|str2[12]            ; 1       ;
-; esp8266_encode:encode|str1[271]           ; 1       ;
-; esp8266_encode:encode|str2[11]            ; 3       ;
-; esp8266_encode:encode|str1[265]           ; 2       ;
-; esp8266_encode:encode|str1[266]           ; 1       ;
-; esp8266_encode:encode|str1[267]           ; 1       ;
-; esp8266_encode:encode|str1[262]           ; 1       ;
-; esp8266_encode:encode|str1[263]           ; 1       ;
-; esp8266_encode:encode|str1[257]           ; 1       ;
-; esp8266_encode:encode|str1[259]           ; 2       ;
-; esp8266_encode:encode|str1[253]           ; 1       ;
-; esp8266_encode:encode|str1[254]           ; 1       ;
-; esp8266_encode:encode|str1[255]           ; 1       ;
-; Total number of inverted registers = 195* ;         ;
-+-------------------------------------------+---------+
-* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|clk_set:CLK_UART|cnt[2]                ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |top|esp8266_encode:encode|cnt[0]           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|uart_rx:module_rx_esp8266|receive      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|esp8266_decode:decode|count[1]         ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top|uart_tx:module_tx_esp8266|clk_count[0] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top|uart_rx:module_rx_esp8266|clk_count[0] ;
-; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |top|esp8266_encode:encode|str1[169]        ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|esp8266_encode:encode|str2[108]        ;
-; 4:1                ; 90 bits   ; 180 LEs       ; 180 LEs              ; 0 LEs                  ; Yes        ; |top|esp8266_encode:encode|str1[124]        ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |top|esp8266_encode:encode|str2[31]         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|esp8266_encode:encode|data_send[0]     ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |top|esp8266_encode:encode|data_send[1]     ;
-; 65:1               ; 4 bits    ; 172 LEs       ; 80 LEs               ; 92 LEs                 ; Yes        ; |top|lcd1602:U5|lcd_data[5]                 ;
-; 65:1               ; 4 bits    ; 172 LEs       ; 80 LEs               ; 92 LEs                 ; Yes        ; |top|lcd1602:U5|lcd_data[0]                 ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |top|esp8266_encode:encode|state[10]        ;
-; 257:1              ; 5 bits    ; 855 LEs       ; 40 LEs               ; 815 LEs                ; Yes        ; |top|uart_tx:module_tx_esp8266|clk_count[7] ;
-; 257:1              ; 5 bits    ; 855 LEs       ; 40 LEs               ; 815 LEs                ; Yes        ; |top|uart_rx:module_rx_esp8266|clk_count[6] ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 38 LEs               ; 38 LEs                 ; Yes        ; |top|esp8266_encode:encode|str1[138]        ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top|esp8266_encode:encode|str2[39]         ;
-; 4:1                ; 73 bits   ; 146 LEs       ; 146 LEs              ; 0 LEs                  ; Yes        ; |top|esp8266_encode:encode|str1[161]        ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top|esp8266_encode:encode|str2[17]         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |top ;
-+----------------+------------------+---------------------------------+
-; Parameter Name ; Value            ; Type                            ;
-+----------------+------------------+---------------------------------+
-; BPS_9600       ; 0000000101000101 ; Unsigned Binary                 ;
-; BPS_115200     ; 0000000000011011 ; Unsigned Binary                 ;
-+----------------+------------------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lcd1602:U5 ;
-+----------------+----------+-----------------------------+
-; Parameter Name ; Value    ; Type                        ;
-+----------------+----------+-----------------------------+
-; Mode_Set       ; 00111000 ; Unsigned Binary             ;
-; Cursor_Set     ; 00001100 ; Unsigned Binary             ;
-; Address_Set    ; 00000110 ; Unsigned Binary             ;
-; Clear_Set      ; 00000001 ; Unsigned Binary             ;
-+----------------+----------+-----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 13             ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_2bm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 13             ; Untyped                ;
-; LPM_WIDTHD             ; 7              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_2jm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 13             ; Untyped                ;
-; LPM_WIDTHD             ; 7              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_6bm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                ;
-; LPM_WIDTHD             ; 4              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_ihm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ReceiveMessage_control:UU|lpm_mult:Mult0 ;
-+------------------------------------------------+--------------+---------------------------+
-; Parameter Name                                 ; Value        ; Type                      ;
-+------------------------------------------------+--------------+---------------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY              ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE              ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE            ;
-; LPM_WIDTHA                                     ; 13           ; Untyped                   ;
-; LPM_WIDTHB                                     ; 7            ; Untyped                   ;
-; LPM_WIDTHP                                     ; 20           ; Untyped                   ;
-; LPM_WIDTHR                                     ; 20           ; Untyped                   ;
-; LPM_WIDTHS                                     ; 1            ; Untyped                   ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                   ;
-; LPM_PIPELINE                                   ; 0            ; Untyped                   ;
-; LATENCY                                        ; 0            ; Untyped                   ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                   ;
-; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                   ;
-; USE_EAB                                        ; OFF          ; Untyped                   ;
-; MAXIMIZE_SPEED                                 ; 6            ; Untyped                   ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                   ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped                   ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K       ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                   ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                   ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                   ;
-; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                   ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                   ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                   ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                   ;
-+------------------------------------------------+--------------+---------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                                   ;
-+---------------------------------------+------------------------------------------+
-; Name                                  ; Value                                    ;
-+---------------------------------------+------------------------------------------+
-; Number of entity instances            ; 1                                        ;
-; Entity Instance                       ; ReceiveMessage_control:UU|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 13                                       ;
-;     -- LPM_WIDTHB                     ; 7                                        ;
-;     -- LPM_WIDTHP                     ; 20                                       ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                 ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                       ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                      ;
-;     -- USE_EAB                        ; OFF                                      ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                     ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                       ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                       ;
-+---------------------------------------+------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "lcd1602:U5"                                                                                                                                                                               ;
-+--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; data0[1..0]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data0[5..2]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data0[7]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data0[6]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data1[5..1]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data1[7]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data1[6]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data1[0]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data2[5..3]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data2[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data2[2]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data2[1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data2[0]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data3[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data3[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data3[5]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data4[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data4[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data4[5]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data5[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data5[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data5[5]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data6[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data6[4..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data6[5]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data7[1..0]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data7[3..2]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data7[7]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data7[6]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data7[5]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data7[4]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data8[5..1]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data8[7]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data8[6]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data8[0]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data9[5..3]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data9[7..6]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data9[2]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data9[1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data9[0]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data10[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data10[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data10[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data11[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data11[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data11[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data12[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data12[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data12[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data13[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data13[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data13[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data14[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data14[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data14[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data15[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data15[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data15[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data16[3..2] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data16[7]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data16[6]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data16[5]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data16[4]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data16[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data16[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data17[5..3] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data17[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data17[2]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data17[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data17[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data21[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data21[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data21[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data22[5..1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data22[7]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data22[6]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data22[0]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data23[5..3] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data23[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data23[2]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data23[1]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data23[0]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data24       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; data25       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; data26       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; data26[5..4] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data26[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data27[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data27[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data27[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data28[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data28[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data28[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data29[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data29[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data29[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data30[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data30[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data30[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; data31[7..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data31[4..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; data31[5]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-+--------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ReceiveMessage_control:UU"                                                                 ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; SetAngleOut ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------+
@@ -839,23 +332,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+--------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:05     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Tue Dec 04 12:29:49 2018
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd1602 -c lcd1602
+    Info: Processing started: Fri Mar 22 16:24:27 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcd1602 -c lcd1602 --analysis_and_elaboration
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file source/esp8266_encode.v
     Info (12023): Found entity 1: esp8266_encode
@@ -890,118 +374,17 @@ Warning (10230): Verilog HDL assignment warning at esp8266_decode.v(41): truncat
 Info (12128): Elaborating entity "ReceiveMessage_control" for hierarchy "ReceiveMessage_control:UU"
 Warning (10230): Verilog HDL assignment warning at ReceiveMessage_control.v(14): truncated value with size 32 to match size of target (13)
 Info (12128): Elaborating entity "lcd1602" for hierarchy "lcd1602:U5"
-Info (278001): Inferred 5 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ReceiveMessage_control:UU|Mult0"
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod1"
-Info (12133): Instantiated megafunction "lpm_divide:Mod1" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "13"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2bm.tdf
-    Info (12023): Found entity 1: lpm_divide_2bm
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_27f.tdf
-    Info (12023): Found entity 1: alt_u_div_27f
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0"
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "13"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2jm.tdf
-    Info (12023): Found entity 1: lpm_divide_2jm
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_rlh
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_97f.tdf
-    Info (12023): Found entity 1: alt_u_div_97f
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0"
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "13"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_6bm.tdf
-    Info (12023): Found entity 1: lpm_divide_6bm
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1"
-Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "7"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ihm.tdf
-    Info (12023): Found entity 1: lpm_divide_ihm
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_akh
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_84f.tdf
-    Info (12023): Found entity 1: alt_u_div_84f
-Info (12130): Elaborated megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0"
-Info (12133): Instantiated megafunction "ReceiveMessage_control:UU|lpm_mult:Mult0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHA" = "13"
-    Info (12134): Parameter "LPM_WIDTHB" = "7"
-    Info (12134): Parameter "LPM_WIDTHP" = "20"
-    Info (12134): Parameter "LPM_WIDTHR" = "20"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
-Info (12131): Elaborated megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]", which is child of megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0"
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_kgh.tdf
-    Info (12023): Found entity 1: add_sub_kgh
-Info (12131): Elaborated megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0"
-Info (12131): Elaborated megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0"
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ogh.tdf
-    Info (12023): Found entity 1: add_sub_ogh
-Info (12131): Elaborated megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "ReceiveMessage_control:UU|lpm_mult:Mult0"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "lcd_rw" is stuck at GND
-Info (286030): Timing-Driven Synthesis is running
-Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "lpm_divide:Mod0|lpm_divide_6bm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_97f:divider|add_sub_6_result_int[0]~12"
-    Info (17048): Logic cell "lpm_divide:Mod0|lpm_divide_6bm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_97f:divider|add_sub_8_result_int[0]~14"
-    Info (17048): Logic cell "lpm_divide:Mod0|lpm_divide_6bm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_97f:divider|add_sub_9_result_int[0]~14"
-    Info (17048): Logic cell "lpm_divide:Mod0|lpm_divide_6bm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_97f:divider|add_sub_11_result_int[0]~14"
-    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_97f:divider|add_sub_6_result_int[0]~12"
-    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_97f:divider|add_sub_8_result_int[0]~16"
-    Info (17048): Logic cell "lpm_divide:Div0|lpm_divide_2jm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_97f:divider|add_sub_9_result_int[0]~16"
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider|add_sub_6_result_int[0]~10"
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider|add_sub_8_result_int[0]~10"
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider|add_sub_9_result_int[0]~10"
-    Info (17048): Logic cell "lpm_divide:Mod1|lpm_divide_2bm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_27f:divider|add_sub_11_result_int[0]~10"
-Info (144001): Generated suppressed messages file C:/Users/wslibeia/Desktop/bishe/output_files/lcd1602.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rx_PC"
-Info (21057): Implemented 1544 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 1527 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 568 megabytes
-    Info: Processing ended: Tue Dec 04 12:29:55 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+Info (144001): Generated suppressed messages file D:/Data/git/Graduation project/Client/FPGA/ESP8266/Prj/output_files/lcd1602.map.smsg
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4588 megabytes
+    Info: Processing ended: Fri Mar 22 16:24:28 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/wslibeia/Desktop/bishe/output_files/lcd1602.map.smsg.
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in D:/Data/git/Graduation project/Client/FPGA/ESP8266/Prj/output_files/lcd1602.map.smsg.
 
 

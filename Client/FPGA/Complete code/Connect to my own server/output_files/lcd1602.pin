@@ -74,7 +74,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 3         :        :                   :      
 GND                          : 4         : gnd    :                   :         :           :                
 VCCINT                       : 5         : power  :                   : 1.2V    :           :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 6         : input  : 2.5 V             :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 7         :        :                   :         : 1         :                
+speaker_io                   : 7         : output : 2.5 V             :         : 1         : Y              
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 8         : input  : 2.5 V             :         : 1         : N              
 nSTATUS                      : 9         :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 10        :        :                   :         : 1         :                
@@ -142,7 +142,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 71        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 72        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 73        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 74        :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 75        :        :                   :         : 5         :                
+lcd_rw                       : 75        : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 76        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 77        :        :                   :         : 5         :                
 VCCINT                       : 78        : power  :                   : 1.2V    :           :                
@@ -153,8 +153,8 @@ GND                          : 82        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : 83        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
-rx_esp8266                   : 86        : input  : 2.5 V             :         : 5         : Y              
-tx_esp8266                   : 87        : output : 2.5 V             :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                
 GND+                         : 88        :        :                   :         : 5         :                
 GND+                         : 89        :        :                   :         : 5         :                
 rst_n                        : 90        : input  : 2.5 V             :         : 6         : Y              
@@ -188,7 +188,7 @@ VCCIO7                       : 117       : power  :                   : 2.5V    
 GND                          : 118       : gnd    :                   :         :           :                
 rx_PC                        : 119       : input  : 2.5 V             :         : 7         : Y              
 tx_PC                        : 120       : output : 2.5 V             :         : 7         : Y              
-dht11_io                     : 121       : bidir  : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 121       :        :                   :         : 7         :                
 VCCIO7                       : 122       : power  :                   : 2.5V    : 7         :                
 GND                          : 123       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 124       :        :                   :         : 7         :                
@@ -202,14 +202,14 @@ GND                          : 131       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : 132       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 133       :        :                   :         : 8         :                
 VCCINT                       : 134       : power  :                   : 1.2V    :           :                
-lcd_rw                       : 135       : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 136       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 135       :        :                   :         : 8         :                
+dht11_io                     : 136       : bidir  : 2.5 V             :         : 8         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 137       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 138       :        :                   :         : 8         :                
+pcf8591_scl                  : 138       : output : 2.5 V             :         : 8         : Y              
 VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
 GND                          : 140       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 141       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 142       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 143       :        :                   :         : 8         :                
-ds18b20_io                   : 144       : bidir  : 2.5 V             :         : 8         : Y              
+pcf8591_sda                  : 141       : bidir  : 2.5 V             :         : 8         : Y              
+rx_esp8266                   : 142       : input  : 2.5 V             :         : 8         : Y              
+tx_esp8266                   : 143       : output : 2.5 V             :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 144       :        :                   :         : 8         :                
 GND                          : EPAD      :        :                   :         :           :                

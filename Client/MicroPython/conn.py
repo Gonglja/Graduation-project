@@ -15,5 +15,5 @@ def do_connect(i):
     print('network config:', sta_if.ifconfig())
 
 #for i in range(0,3):	
-do_connect(1)
+do_connect(2)
     	

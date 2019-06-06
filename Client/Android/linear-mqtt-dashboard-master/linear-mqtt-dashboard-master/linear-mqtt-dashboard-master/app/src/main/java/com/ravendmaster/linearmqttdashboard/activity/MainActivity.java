@@ -331,7 +331,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
                                 }
                                 presenter.saveActiveDashboard(getApplicationContext(), MainActivity.presenter.getActiveDashboardId());
                                 refreshDashboard(false);
-                                onTabSelected();//для обновления содержимого вкладки
+                                onTabSelected();//更新标签内容
                                 dialog.cancel();
                             }
                         })
@@ -515,7 +515,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         presenter.onStopTrackingTouch(seekBar);
     }
 
-    //вызов меню параметров виджета (на три точки)
+    //调用控件选项菜单（三点）
     public void showPopupMenuWidgetEditButtonOnClick(View view) {
 
         final WidgetData widget = (WidgetData) view.getTag();
@@ -562,7 +562,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     }
 
 
-    //вызов комбо бокс списка
+    //呼叫组合框列表
     public void showPopupMenuComboBoxSelectorButtonOnClick(View view) {
 
         presenter.onComboBoxSelector(view);//регистрируем нажатый виджет для дальнейшего publish

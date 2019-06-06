@@ -98,14 +98,22 @@ public class AppSettings {
         //settingsVersion=0;
 
         if (server.equals("")) {
-            server = "m21.cloudmqtt.com";
-            port = "16796";
-            username = "ejoxlycf";
-            password = "odhSFqxSDACF";
+            //server = "m21.cloudmqtt.com";
+            //port = "16796";
+           /// username = "ejoxlycf";
+            //password = "odhSFqxSDACF";
+            //3.0 subscribe_topic = "out/wcs/#";
+            //push_notifications_subscribe_topic = "out/wcs/push_notifications/#";
+            //keep_alive = "60";
+            //connection_in_background = false;
+            server = "gongccc.xyz";
+            port = "1883";
+            username = "admin_mp2";
+            password = "0800";
             //3.0 subscribe_topic = "out/wcs/#";
             push_notifications_subscribe_topic = "out/wcs/push_notifications/#";
             keep_alive = "60";
-            connection_in_background = false;
+            connection_in_background = true;
         }
 
         /* 3.0
@@ -123,7 +131,7 @@ public class AppSettings {
 
         //tabs
         if (settingsVersion == 0) {
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 1; i++) {//4
                 TabData tabData = new TabData();
                 tabData.id = i;
                 tabData.name = sprefs.getString("tab" + (i+1), "tab #" + i);

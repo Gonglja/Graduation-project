@@ -1,4 +1,5 @@
+Warning (10268): Verilog HDL information at ad.v(29): always construct contains both blocking and non-blocking assignments
 Info (10281): Verilog HDL Declaration information at dht11.v(3): object "Data" differs only in case from object "data" in the same scope
-Info (10281): Verilog HDL Declaration information at esp8266_encode.v(4): object "Sig" differs only in case from object "sig" in the same scope
-Info (10281): Verilog HDL Declaration information at esp8266_encode.v(5): object "Data_send" differs only in case from object "data_send" in the same scope
+Info (10281): Verilog HDL Declaration information at esp8266_encode.v(6): object "Sig" differs only in case from object "sig" in the same scope
+Info (10281): Verilog HDL Declaration information at esp8266_encode.v(7): object "Data_send" differs only in case from object "data_send" in the same scope
 Warning (10273): Verilog HDL warning at lcd1602.v(498): extended using "x" or "z"

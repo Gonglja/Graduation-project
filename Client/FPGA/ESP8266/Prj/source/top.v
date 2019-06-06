@@ -114,19 +114,18 @@ lcd1602 U5( 	.clk(clk_sys),    //50M  20ns
 //第二行
 					.data16("R"),
 					.data17(":"),
-					.data18(datarece[23:16]),
-					.data19(datarece[15:8]),
-					.data20(datarece[7:0]),
+					.data18(" "),
+					.data19(" "),
+					.data20(" "),
 					.data21(" "),
 					.data22("A"),
 					.data23(":"),
-					.data24(8'h30+SetAngleOut/100),
-					.data25(8'h30+SetAngleOut%100/10),
-					.data26(8'h30+SetAngleOut%10),
+					.data24(" "),
+					.data25(" "),
+					.data26(" "),
 					.data27(" "),
 					.data28(" "),
-					.data29(" "),
-					
+					.data29(" "),	
 					.data30(" "),
 					.data31(" ")
 

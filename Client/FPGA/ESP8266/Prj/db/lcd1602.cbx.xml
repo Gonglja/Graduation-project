@@ -1,13 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="lcd1602">
-		<CBX_INST_ENTRY INSTANCE_NAME="|top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_kgh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_ogh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|top|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_ihm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|top|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_6bm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|top|ReceiveMessage_control:UU|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]" CBX_FILE_NAME="add_sub_kgh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|top|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_2jm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|top|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_2bm.tdf"/>
 	</PROJECT>
 	<PROJECT NAME="lcd602">
 	</PROJECT>

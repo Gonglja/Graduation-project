@@ -3,8 +3,6 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
-	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("D:/Data/git/Graduation project/Client/FPGA/Complete code/Connect to my own server/output_files/") File("lcd1602.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

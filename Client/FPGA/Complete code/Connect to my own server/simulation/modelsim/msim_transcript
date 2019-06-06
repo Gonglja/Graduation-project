@@ -10,86 +10,79 @@
 # ** Warning: Copied D:\1\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_encode.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Gonglja/Desktop/Connect\ to\ my\ own\ server/source {C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module esp8266_encode
+# -- Compiling module ad
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(58): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	esp8266_encode
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/esp8266_decode.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module esp8266_decode
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(60): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	esp8266_decode
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/clk_set.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module clk_set
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(63): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	clk_set
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pwm.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module pwm
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(66): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	pwm
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/pid_control.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module pid_control
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(69): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	pid_control
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/lcd1602.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module lcd1602
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(72): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	lcd1602
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/w_dale.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module w_dale
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(75): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	w_dale
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_tx.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module uart_tx
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(78): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	uart_tx
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/uart_rx.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module uart_rx
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(81): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	uart_rx
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/top.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module top
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(84): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	top
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/angle_dale.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module angle_dale
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(87): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	angle_dale
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/source/ReceiveMessage_control.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module ReceiveMessage_control
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(96): (vlog-2110) Illegal reference to net "sda".
 # 
-# Top level modules:
-# 	ReceiveMessage_control
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(99): (vlog-2110) Illegal reference to net "sda".
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0 {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/tb.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# ** Error: (vlog-7) Failed to open design unit file "C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/tb.v" in read mode.
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(102): (vlog-2110) Illegal reference to net "sda".
 # 
-# No such file or directory. (errno = ENOENT)
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(105): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(108): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(111): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(114): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(117): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(120): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(129): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(131): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(133): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(136): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(139): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(142): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(145): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(148): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(151): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(154): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(157): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(168): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(193): (vlog-2110) Illegal reference to net "sda".
+# 
+# ** Error: C:/Users/Gonglja/Desktop/Connect to my own server/source/ad.v(197): (vlog-2110) Illegal reference to net "sda".
+# 
 # ** Error: D:/1/altera/13.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./lcd1602_run_msim_rtl_verilog.do line 21
+# Error in macro ./lcd1602_run_msim_rtl_verilog.do line 8
 # D:/1/altera/13.0/modelsim_ase/win32aloem/vlog failed.
 #     while executing
-# "vlog -vlog01compat -work work +incdir+C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0 {C:/Users/wslibeia/Desktop/fenglibai(UART)(E)/Code/V1.0/t..."
+# "vlog -vlog01compat -work work +incdir+C:/Users/Gonglja/Desktop/Connect\ to\ my\ own\ server/source {C:/Users/Gonglja/Desktop/Connect to my own server/..."

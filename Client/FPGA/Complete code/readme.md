@@ -28,7 +28,6 @@ AT+CIPSEND
 
 
 
-
 //更新数据接口消息
 {"M":"update","ID":"7351","V":{"7073":"7073"}}
 
@@ -40,7 +39,6 @@ AT+CIPSEND
 
 //从串口助手接收到的web端命令
 {"M":"say","ID":"U5197","NAME":"wslibeia(web)","C":"play","T":"1543583007"}
-
 
 
 https://blog.csdn.net/richardgann/article/details/78663243
@@ -55,10 +53,10 @@ esp8266固件：[micropython](http://docs.micropython.org/en/latest/esp8266/quic
 
 ### 核心思想
 
-使用emqq协议，通过发布，订阅完成数据的上传与下载
+使用mqtt协议，通过发布，订阅完成数据的上传与下载
 
 ### 具体步骤实现
 
-FPGA使用串口对esp8266发送类似指令 `p.m(“主题”，“消息”)` 
+FPGA使用串口对esp8266发送类似指令 `m(“主题”，“消息”)`或`m(“消息1“,“消息2“,...)` ESP8266端需与之对应。
 
-esp8266 使用micyropython编写emqq协议，及发布和订阅命令。
+esp8266 使用micropython编写mqtt协议，及发布和订阅命令。

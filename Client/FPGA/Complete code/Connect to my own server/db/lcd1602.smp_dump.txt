@@ -1,62 +1,10 @@
 
-State Machine - |top|ds18b20:ds18b20|ReadBitstate
-Name ReadBitstate.state_3 ReadBitstate.state_2 ReadBitstate.state_1 ReadBitstate.state_0 ReadBitstate.state_4 
-ReadBitstate.state_0 0 0 0 0 0 
-ReadBitstate.state_1 0 0 1 1 0 
-ReadBitstate.state_2 0 1 0 1 0 
-ReadBitstate.state_3 1 0 0 1 0 
-ReadBitstate.state_4 0 0 0 1 1 
-
-State Machine - |top|ds18b20:ds18b20|Readstate
-Name Readstate.state_3 Readstate.state_2 Readstate.state_1 Readstate.state_0 
-Readstate.state_0 0 0 0 0 
-Readstate.state_1 0 0 1 1 
-Readstate.state_2 0 1 0 1 
-Readstate.state_3 1 0 0 1 
-
-State Machine - |top|ds18b20:ds18b20|WriteBitstate
-Name WriteBitstate.state_6 WriteBitstate.state_5 WriteBitstate.state_4 WriteBitstate.state_3 WriteBitstate.state_2 WriteBitstate.state_1 WriteBitstate.state_0 
-WriteBitstate.state_0 0 0 0 0 0 0 0 
-WriteBitstate.state_1 0 0 0 0 0 1 1 
-WriteBitstate.state_2 0 0 0 0 1 0 1 
-WriteBitstate.state_3 0 0 0 1 0 0 1 
-WriteBitstate.state_4 0 0 1 0 0 0 1 
-WriteBitstate.state_5 0 1 0 0 0 0 1 
-WriteBitstate.state_6 1 0 0 0 0 0 1 
-
-State Machine - |top|ds18b20:ds18b20|Writestate
-Name Writestate.state_0 Writestate.state_2 Writestate.state_1 
-Writestate.state_0 0 0 0 
-Writestate.state_1 1 0 1 
-Writestate.state_2 1 1 0 
-
-State Machine - |top|ds18b20:ds18b20|CmdSETstate
-Name CmdSETstate.state_13 CmdSETstate.state_12 CmdSETstate.state_11 CmdSETstate.state_10 CmdSETstate.state_9 CmdSETstate.state_8 CmdSETstate.state_7 CmdSETstate.state_6 CmdSETstate.state_5 CmdSETstate.state_4 CmdSETstate.state_3 CmdSETstate.state_2 CmdSETstate.state_1 CmdSETstate.state_0 
-CmdSETstate.state_0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-CmdSETstate.state_1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-CmdSETstate.state_2 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-CmdSETstate.state_3 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-CmdSETstate.state_4 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-CmdSETstate.state_5 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-CmdSETstate.state_6 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-CmdSETstate.state_7 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-CmdSETstate.state_8 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-CmdSETstate.state_9 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-CmdSETstate.state_10 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-CmdSETstate.state_11 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-CmdSETstate.state_12 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-CmdSETstate.state_13 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-
-State Machine - |top|ds18b20:ds18b20|Rststate
-Name Rststate.state_7 Rststate.state_6 Rststate.state_5 Rststate.state_4 Rststate.state_3 Rststate.state_1 Rststate.state_0 Rststate.state_8 
-Rststate.state_0 0 0 0 0 0 0 0 0 
-Rststate.state_1 0 0 0 0 0 1 1 0 
-Rststate.state_3 0 0 0 0 1 0 1 0 
-Rststate.state_4 0 0 0 1 0 0 1 0 
-Rststate.state_5 0 0 1 0 0 0 1 0 
-Rststate.state_6 0 1 0 0 0 0 1 0 
-Rststate.state_7 1 0 0 0 0 0 1 0 
-Rststate.state_8 0 0 0 0 0 0 1 1 
+State Machine - |top|ad:pcf8591|ack
+Name ack.11 ack.10 ack.01 ack.00 
+ack.00 0 0 0 0 
+ack.01 0 0 1 1 
+ack.10 0 1 0 1 
+ack.11 1 0 0 1 
 
 State Machine - |top|dht11:DHT11|state
 Name state.state12 state.state11 state.state10 state.state9 state.state8 state.state7 state.state6 state.state5 state.state4 state.state3 state.state2 state.state1 state.00000 
